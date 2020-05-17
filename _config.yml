@@ -1,0 +1,10 @@
+# Setup
+title: D&D API
+tagline: Spells and Items
+description: Access D&D 5th Edition spells and items via a REST API.
+permalink: pretty
+
+github:
+  repo: mloberg/dnd5e-api
+
+version: 0.0.1
