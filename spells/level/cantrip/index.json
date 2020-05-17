@@ -1,0 +1,8 @@
+---
+---
+[
+    {%- assign spells = site.data.spells | where_exp: "spell", "spell.level == 0" -%}
+    {%- for spell in spells -%}
+        {{ spell | jsonify }}{% if forloop.last == false %},{% endif %}
+    {%- endfor -%}
+]
