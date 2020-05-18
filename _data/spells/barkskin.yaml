@@ -1,0 +1,16 @@
+name: Barkskin
+level: 2
+school: transmutation
+class:
+  - Druid
+  - Ranger
+time: 1 action
+range: Touch
+components: V, S, M (a handful of oak bark)
+duration: 1 hour
+ritual: false
+concentration: true
+description: >-
+  You touch a willing creature. Until the spell ends, the target's skin has a
+  rough, bark-like appearance, and the target's AC can't be less than 16,
+  regardless of what kind of armor it is wearing.
