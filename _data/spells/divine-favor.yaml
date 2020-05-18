@@ -1,0 +1,14 @@
+spell: Divine Favor
+level: 1
+school: evocation
+class:
+  - Paladin
+time: 1 bonus action
+range: Self
+components: V, S
+duration: 1 minute
+ritual: false
+concentration: true
+description: >-
+  Your prayer empowers you with divine radiance. Until the spell ends, your
+  weapon attacks deal an extra 1d4 radiant damage on a hit.
