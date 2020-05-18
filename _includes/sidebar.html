@@ -11,28 +11,28 @@
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item{% if page.title == 'Home' %} active{% endif %}" href="{{ "/" | absolute_url }}">Home</a>
 
-    <a class="sidebar-nav-item" href="{{ "/spells/" | relative_url }}">Spells</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells.json" | relative_url }}">Spells</a>
     <span class="sidebar-nav-item">&nbsp;&nbsp;By Class</span>
-    <a class="sidebar-nav-item" href="{{ "/spells/class/bard/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Bard</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/class/cleric/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Cleric</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/class/druid/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Druid</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/class/paladin/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Paladin</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/class/ranger/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Ranger</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/class/warlock/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Warlock</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/class/wizard/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Wizard</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/class/bard.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Bard</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/class/cleric.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Cleric</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/class/druid.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Druid</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/class/paladin.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Paladin</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/class/ranger.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Ranger</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/class/warlock.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Warlock</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/class/wizard.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Wizard</a>
     <span class="sidebar-nav-item">&nbsp;&nbsp;By Level</span>
-    <a class="sidebar-nav-item" href="{{ "/spells/level/cantrip/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Cantrip</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/level/1st/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;1st</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/level/2nd/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;2nd</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/level/3rd/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;3rd</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/level/4th/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;4th</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/level/5th/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;5th</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/level/6th/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;6th</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/level/7th/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;7th</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/level/8th/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;8th</a>
-    <a class="sidebar-nav-item" href="{{ "/spells/level/9th/" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;9th</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/level/cantrip.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;Cantrip</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/level/1st.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;1st</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/level/2nd.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;2nd</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/level/3rd.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;3rd</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/level/4th.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;4th</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/level/5th.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;5th</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/level/6th.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;6th</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/level/7th.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;7th</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/level/8th.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;8th</a>
+    <a class="sidebar-nav-item" href="{{ "/api/spells/level/9th.json" | relative_url }}">&nbsp;&nbsp;&nbsp;&nbsp;9th</a>
 
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}">Source</a>
+    <a class="sidebar-nav-item" href="https://github.com/{{ site.github.repo }}">Source</a>
     <span class="sidebar-nav-item">Version v{{ site.version }}</span>
   </nav>
 
