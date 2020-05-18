@@ -1,0 +1,18 @@
+spell: Protection from Energy
+level: 3
+school: abjuration
+class:
+  - Cleric
+  - Druid
+  - Ranger
+  - Sorcerer
+  - Wizard
+time: 1 action
+range: Touch
+components: V, S
+duration: 1 hour
+ritual: false
+concentration: true
+description: >-
+  For the duration, the willing creature you touch has resistance to one damage
+  type of your choice: acid, cold, fire, lightning, or thunder.
