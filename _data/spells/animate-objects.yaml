@@ -8,7 +8,7 @@ class:
 time: 1 action
 range: 120 feet
 components: V, S
-duration:	1 minute
+duration: 1 minute
 ritual: false
 concentration: true
 description: >-

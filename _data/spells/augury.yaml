@@ -6,7 +6,7 @@ class:
 time: 1 minute
 range: Self
 components: V, S, M (specially marked sticks, bones, or similar tokens worth at least 25 gp)
-duration:	Instantaneous
+duration: Instantaneous
 ritual: true
 concentration: false
 description: >-

@@ -6,7 +6,7 @@ class:
 time: 1 action
 range: 30 feet
 components: V, S, M (a bit of bat fur)
-duration:	1 hour
+duration: 1 hour
 ritual: false
 concentration: true
 description: >-

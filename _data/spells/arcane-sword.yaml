@@ -7,7 +7,7 @@ class:
 time: 1 action
 range: 60 feet
 components: V, S, M (a miniature platinum sword with a grip and pommel of copper and zinc, worth 250 gp)
-duration:	1 minute
+duration: 1 minute
 ritual: false
 concentration: true
 description: >-

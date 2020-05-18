@@ -7,7 +7,7 @@ class:
 time: 1 hour
 range: 60 feet
 components: V, S, M (either a lump of alum soaked in vinegar for the antipathy effect or a drop of honey for the sympathy effect)
-duration:	10 days
+duration: 10 days
 ritual: false
 concentration: false
 description: >-

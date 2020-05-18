@@ -6,7 +6,7 @@ class:
 time: 1 action
 range: Touch
 components: V, S, M (a small square of silk)
-duration:	24 hours
+duration: 24 hours
 ritual: false
 concentration: false
 description: >-
