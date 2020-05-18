@@ -1,0 +1,17 @@
+spell: Greater Invisibility
+level: 4
+school: illusion
+class:
+  - Bard
+  - Sorcerer
+  - Wizard
+time: 1 action
+range: Touch
+components: V, S
+duration: 1 minute
+ritual: false
+concentration: true
+description: >-
+  You or a creature you touch becomes invisible until the spell ends. Anything
+  the target is wearing or carrying is invisible as long as it is on the
+  target's person.
