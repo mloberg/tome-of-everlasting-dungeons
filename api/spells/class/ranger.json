@@ -1,8 +1,5 @@
 ---
 ---
-[
-    {%- assign ranger = site.data.spells | where_exp: "spell", "spell.class contains 'Ranger'" -%}
-    {%- for spell in ranger -%}
-        {{ spell | jsonify }}{% if forloop.last == false %},{% endif %}
-    {%- endfor -%}
-]
+{"spells":
+    {%- include spells.json filter="class contains 'Ranger'" -%}
+}

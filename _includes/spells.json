@@ -1,0 +1,20 @@
+{%- capture filter -%}
+    {% if include.filter %}
+        spell.{{ include.filter }}
+    {% else %}
+        spell
+    {% endif %}
+{% endcapture %}
+
+{%- assign sorted = site.data.spells | where_exp: "spell", filter | sort: "level" | group_by: "level" -%}
+
+[
+{%- for level in sorted -%}
+    {%- assign spells = level.items | sort: "spell" -%}
+    {%- for spell in spells -%}
+        {{ spell | jsonify }}
+        {%- if forloop.last == false -%},{% endif %}
+    {%- endfor -%}
+    {%- if forloop.last == false -%},{% endif %}
+{%- endfor -%}
+]
