@@ -1,0 +1,159 @@
+---
+---
+openapi: 3.0.0
+info:
+  title: {{ site.title }}
+  version: '{{ site.version }}'
+  description: {{ site.description }}
+servers:
+  - url: 'https://dnd.mlo.io/api'
+  - url: 'http://localhost:4000/api'
+    description: local
+paths:
+  /spells.json:
+    get:
+      summary: Spell List
+      tags:
+        - Spells
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  spells:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Spell'
+      operationId: spells.list
+      description: Return all spells
+  '/spells/class/{class}.json':
+    parameters:
+      - schema:
+          type: string
+          enum:
+            - bard
+            - cleric
+            - druid
+            - paladin
+            - ranger
+            - sorcerer
+            - warlock
+            - wizard
+        name: class
+        in: path
+        required: true
+        description: ''
+    get:
+      summary: Spells by Class
+      tags:
+        - Spells
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  spells:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Spell'
+      operationId: spells.class
+      description: List spells by class
+  '/spells/level/{level}.json':
+    parameters:
+      - schema:
+          type: string
+          enum:
+            - cantrip
+            - 1st
+            - 2nd
+            - 3rd
+            - 4th
+            - 5th
+            - 6th
+            - 7th
+            - 8th
+            - 9th
+        name: level
+        in: path
+        required: true
+    get:
+      summary: Spells by Level
+      tags:
+        - Spells
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  spells:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Spell'
+      operationId: spells.level
+      description: List spells by level
+components:
+  schemas:
+    Spell:
+      title: Spell
+      type: object
+      x-examples: {}
+      properties:
+        spell:
+          type: string
+        level:
+          type: integer
+          minimum: 0
+          maximum: 9
+        school:
+          $ref: '#/components/schemas/SchoolEnum'
+        class:
+          type: array
+          items:
+            $ref: '#/components/schemas/ClassEnum'
+        time:
+          type: string
+        range:
+          type: string
+        components:
+          type: string
+        duration:
+          type: string
+        ritual:
+          type: boolean
+        concentration:
+          type: boolean
+        description:
+          type: string
+    ClassEnum:
+      type: string
+      title: ClassEnum
+      enum:
+        - Bard
+        - Cleric
+        - Druid
+        - Paladin
+        - Ranger
+        - Sorcerer
+        - Warlock
+        - Wizard
+    SchoolEnum:
+      type: string
+      title: SchoolEnum
+      enum:
+        - abjuration
+        - conjuration
+        - divination
+        - enchantment
+        - evocation
+        - illusion
+        - necromancy
+        - transmutation
