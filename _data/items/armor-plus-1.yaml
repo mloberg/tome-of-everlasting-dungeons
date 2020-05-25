@@ -1,0 +1,5 @@
+item: Armor, +1
+type: Armor
+subtype: light, medium, or heavy
+rarity: rare
+attunement: false

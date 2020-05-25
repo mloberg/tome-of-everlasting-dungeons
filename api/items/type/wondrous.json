@@ -1,0 +1,5 @@
+---
+---
+{"items":
+    {%- include items.json filter="type == 'Wondrous item'" -%}
+}

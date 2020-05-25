@@ -2,13 +2,16 @@
 ---
 openapi: 3.0.0
 info:
-  title: {{ site.title }}
+  title: '{{ site.title }}'
   version: '{{ site.version }}'
-  description: {{ site.description }}
+  description: '{{ site.description }}'
 servers:
   - url: 'https://dnd.mlo.io/api'
   - url: 'http://localhost:4000/api'
     description: local
+tags:
+  - name: Spells
+  - name: Items
 paths:
   /spells.json:
     get:
@@ -48,8 +51,6 @@ paths:
         description: ''
     get:
       summary: Spells by Class
-      tags:
-        - Spells
       responses:
         '200':
           description: OK
@@ -64,6 +65,8 @@ paths:
                       $ref: '#/components/schemas/Spell'
       operationId: spells.class
       description: List spells by class
+      tags:
+        - Spells
   '/spells/level/{level}.json':
     parameters:
       - schema:
@@ -84,8 +87,6 @@ paths:
         required: true
     get:
       summary: Spells by Level
-      tags:
-        - Spells
       responses:
         '200':
           description: OK
@@ -100,6 +101,91 @@ paths:
                       $ref: '#/components/schemas/Spell'
       operationId: spells.level
       description: List spells by level
+      tags:
+        - Spells
+  /items.json:
+    get:
+      summary: Item List
+      tags:
+        - Items
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Item'
+      operationId: item.list
+      description: Return all items
+  '/items/rarity/{rarity}.json':
+    get:
+      summary: Items by Rarity
+      tags:
+        - Items
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Item'
+      operationId: items.rarity
+      description: List items by rarity
+    parameters:
+      - schema:
+          type: string
+          enum:
+            - common
+            - uncommon
+            - rare
+            - very-rare
+            - legendary
+        name: rarity
+        in: path
+        required: true
+  '/items/type/{type}.json':
+    parameters:
+      - schema:
+          type: string
+          enum:
+            - armor
+            - potion
+            - ring
+            - rod
+            - scroll
+            - staff
+            - wand
+            - weapon
+            - wondrous
+        name: type
+        in: path
+        required: true
+    get:
+      summary: Items by Type
+      tags:
+        - Items
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    $ref: '#/components/schemas/Item'
+      operationId: items.type
+      description: List items by type
 components:
   schemas:
     Spell:
@@ -114,11 +200,29 @@ components:
           minimum: 0
           maximum: 9
         school:
-          $ref: '#/components/schemas/SchoolEnum'
+          type: string
+          enum:
+            - abjuration
+            - conjuration
+            - divination
+            - enchantment
+            - evocation
+            - illusion
+            - necromancy
+            - transmutation
         class:
           type: array
           items:
-            $ref: '#/components/schemas/ClassEnum'
+            type: string
+            enum:
+              - Bard
+              - Cleric
+              - Druid
+              - Paladin
+              - Ranger
+              - Sorcerer
+              - Warlock
+              - Wizard
         time:
           type: string
         range:
@@ -133,27 +237,30 @@ components:
           type: boolean
         description:
           type: string
-    ClassEnum:
-      type: string
-      title: ClassEnum
-      enum:
-        - Bard
-        - Cleric
-        - Druid
-        - Paladin
-        - Ranger
-        - Sorcerer
-        - Warlock
-        - Wizard
-    SchoolEnum:
-      type: string
-      title: SchoolEnum
-      enum:
-        - abjuration
-        - conjuration
-        - divination
-        - enchantment
-        - evocation
-        - illusion
-        - necromancy
-        - transmutation
+    Item:
+      title: Item
+      type: object
+      properties:
+        item:
+          type: string
+        type:
+          type: string
+          enum:
+            - Armor
+            - Potion
+            - Ring
+            - Rod
+            - Scroll
+            - Staff
+            - Wand
+            - Weapon
+            - Wondrous item
+        subtype:
+          type: string
+          nullable: true
+        rarity:
+          type: string
+        attunement:
+          oneOf:
+            - type: string
+            - type: boolean

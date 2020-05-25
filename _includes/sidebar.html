@@ -44,6 +44,34 @@
       </div>
     </div>
 
+    <a class="sidebar-nav-item" href="{% link api/items.json %}">&nbsp;&nbsp;Items</a>
+
+    <div x-data="{ isOpen: false }">
+      <span class="sidebar-nav-item expandable" :class="{ 'active': isOpen }" @click="isOpen = !isOpen">&nbsp;&nbsp;&nbsp;&nbsp;By Rarity</span>
+      <div x-show="isOpen">
+        <a class="sidebar-nav-item" href="{% link api/items/rarity/common.json %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Common</a>
+        <a class="sidebar-nav-item" href="{% link api/items/rarity/uncommon.json %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uncommon</a>
+        <a class="sidebar-nav-item" href="{% link api/items/rarity/rare.json %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rare</a>
+        <a class="sidebar-nav-item" href="{% link api/items/rarity/very-rare.json %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Very Rare</a>
+        <a class="sidebar-nav-item" href="{% link api/items/rarity/legendary.json %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Legendary</a>
+      </div>
+    </div>
+
+    <div x-data="{ isOpen: false }">
+      <span class="sidebar-nav-item expandable" :class="{ 'active': isOpen }" @click="isOpen = !isOpen">&nbsp;&nbsp;&nbsp;&nbsp;By Type</span>
+      <div x-show="isOpen">
+        <a class="sidebar-nav-item" href="{% link api/items/type/armor.json %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Armor</a>
+        <a class="sidebar-nav-item" href="{% link api/items/type/potion.json %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Potion</a>
+        <a class="sidebar-nav-item" href="{% link api/items/type/ring.json %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ring</a>
+        <a class="sidebar-nav-item" href="{% link api/items/type/rod.json %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rod</a>
+        <a class="sidebar-nav-item" href="{% link api/items/type/scroll.json %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scroll</a>
+        <a class="sidebar-nav-item" href="{% link api/items/type/staff.json %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Staff</a>
+        <a class="sidebar-nav-item" href="{% link api/items/type/wand.json %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wand</a>
+        <a class="sidebar-nav-item" href="{% link api/items/type/weapon.json %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Weapon</a>
+        <a class="sidebar-nav-item" href="{% link api/items/type/wondrous.json %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wondrous</a>
+      </div>
+    </div>
+
     <a class="sidebar-nav-item" href="https://github.com/{{ site.github.repo }}">Source</a>
     <span class="sidebar-nav-item">Version v{{ site.version }}</span>
   </nav>

@@ -1,0 +1,16 @@
+{%- capture filter -%}
+    {% if include.filter %}
+        item.{{ include.filter }}
+    {% else %}
+        item
+    {% endif %}
+{% endcapture %}
+
+{%- assign sorted = site.data.items | where_exp: "item", filter | sort: "item" -%}
+
+[
+{%- for item in sorted -%}
+    {{ item | jsonify }}
+    {%- if forloop.last == false -%},{% endif %}
+{%- endfor -%}
+]

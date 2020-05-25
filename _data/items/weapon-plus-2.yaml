@@ -1,0 +1,5 @@
+item: Weapon, +2
+type: Weapon
+subtype: any
+rarity: rare
+attunement: false
