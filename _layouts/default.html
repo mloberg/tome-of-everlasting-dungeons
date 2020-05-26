@@ -1,32 +1,13 @@
+---
+---
 <!DOCTYPE html>
-<html lang="en-us">
-
-  {% include head.html %}
-
-  <body>
-
-    {% include sidebar.html %}
-
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="{{ "/" | relative_url }}" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
-        </div>
-      </div>
-
-      <div class="container content">
-        {{ content }}
-      </div>
-    </div>
-
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
-    <script src="{% link assets/js/script.js %}" defer></script>
-  </body>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include head.html %}
+<body class="bg-gray-200 font-sans leading-normal tracking-normal">
+  {% include header.html %}
+  <main class="container w-full mx-auto px-2">
+    {{ content }}
+  </main>
+  <script src="{% link /assets/js/app.js %}"></script>
+</body>
 </html>

@@ -1,0 +1,28 @@
+---
+layout: default
+title: Home
+---
+<header class="bg-center bg-no-repeat bg-cover p-32" style="background-image: url('{% link images/yazgi-QuP5RL_E5oE.jpg %}');">
+  <div class="container mx-auto px-4">
+    <h1 class="inline-block bg-white font-title text-5xl text-black my-8 py-2 px-4">{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+  </div>
+</header>
+
+<div class="mt-6">
+  <p>A collection of tools and resources for your 5e games. <em>This is a work in progress</em>.</p>
+</div>
+
+<div class="flex">
+  <div class="p-8">
+    <a href="{% link docs.html %}">
+      <div class="relative bg-black shadow-lg rounded-lg group h-64 w-64 flex justify-center items-center">
+        <div class="rounded-lg h-full w-full absolute z-10 bg-cover bg-center hover:opacity-50 transition-all duration-500 ease-in-out" style="background-image: url('{% link images/pVdiv_8oY_s-sm.jpg %}')">
+        </div>
+        <p class="font-bold text-lg text-white absolute z-20 pointer-events-none">
+          APIs
+        </p>
+      </div>
+    </a>
+  </div>
+</div>
