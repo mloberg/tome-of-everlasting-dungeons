@@ -1,7 +1,8 @@
 {
     "private": true,
     "scripts": {
-        "dev": "encore dev"
+        "dev": "encore dev",
+        "prod": "encore prod"
     },
     "dependencies": {
         "alpinejs": "^2.3.5",

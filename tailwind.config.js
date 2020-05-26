@@ -1,5 +1,9 @@
 module.exports = {
-  purge: [],
+  purge: [
+    "./**/*.html",
+    "./**/*.md",
+    "./_assets/**/*.js",
+  ],
   theme: {
     extend: {},
   },
