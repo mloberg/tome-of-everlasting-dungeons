@@ -5,6 +5,49 @@
       <small class="text-gray-600 text-sm hidden md:inline"> &middot; {{ site.tagline }}</small>
     </h3>
     <ul class="flex z-50">
+      <!-- DM Tools -->
+      <li class="toggleable hover:bg-blue-800 hover:text-white" x-data="{ open: false }" x-on:mouseover="open = true" x-on:mouseleave="open = false">
+        <input type="checkbox" value="selected" id="toggle-dm" class="toggle-input" x-model="open">
+        <label for="toggle-dm" class="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold">DM Tools</label>
+        <div role="toggle" class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-blue-800">
+          <div class="container mx-auto w-full flex flex-wrap mx-2">
+            <div class="w-full text-white mb-8">
+              <h2 class="font-bold text-2xl">Dungeon Master Tools</h2>
+              <p>Resources for running your games.</p>
+            </div>
+            <!-- Price calculator -->
+            <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+              <div class="flex items-center">
+                <svg class="h-8 mb-3 mr-3 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-11v2h1a3 3 0 0 1 0 6h-1v1a1 1 0 0 1-2 0v-1H8a1 1 0 0 1 0-2h3v-2h-1a3 3 0 0 1 0-6h1V6a1 1 0 0 1 2 0v1h3a1 1 0 0 1 0 2h-3zm-2 0h-1a1 1 0 1 0 0 2h1V9zm2 6h1a1 1 0 0 0 0-2h-1v2z"/>
+                </svg>
+                <h3 class="font-bold text-xl text-white text-bold mb-2">Price Calculator</h3>
+              </div>
+              <p class="text-gray-100 text-sm">Determine a price for a magical item. Takes into account local economy and shop/party relationship.</p>
+              <div class="flex items-center py-3">
+                <svg class="h-6 pr-3 fill-current text-blue-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path class="heroicon-ui" d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z"/>
+                </svg>
+                <a href="{% link prices.html %}" class="text-white bold border-b-2 border-blue-300 hover:text-blue-300">Calculator</a>
+              </div>
+            </ul>
+            <!-- Third party links -->
+            <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
+              <h3 class="font-bold text-xl text-white text-bold">Third-Party Tools</h3>
+              <li>
+                <a href="https://www.fantasynamegenerators.com/" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">
+                  <span class="flex items-center">
+                    Fantasy name generators
+                    <svg class="h-6 pl-3 fill-current text-blue-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path class="heroicon-ui" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41zM17 14a1 1 0 0 1 2 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h5a1 1 0 0 1 0 2H5v12h12v-5z"/>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
       <!-- API endpoints -->
       <li class="toggleable hover:bg-blue-800 hover:text-white" x-data="{ open: false }" x-on:mouseover="open = true" x-on:mouseleave="open = false">
         <input type="checkbox" value="selected" id="toggle-api" class="toggle-input" x-model="open">
