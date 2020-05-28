@@ -5,12 +5,13 @@
         "prod": "encore prod"
     },
     "dependencies": {
-        "alpinejs": "^2.3.5",
-        "tailwindcss": "^1.4.6"
+        "alpinejs": "^2.3.5"
     },
     "devDependencies": {
         "@symfony/webpack-encore": "^0.30.2",
+        "@tailwindcss/custom-forms": "^0.2.1",
         "autoprefixer": "^9.8.0",
-        "postcss-loader": "^3.0.0"
+        "postcss-loader": "^3.0.0",
+        "tailwindcss": "^1.4.6"
     }
 }

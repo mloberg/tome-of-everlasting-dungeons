@@ -36,3 +36,28 @@
     position: relative;
     top: -1px;
 }
+
+.radio-group {
+    @apply leading-10 flex flex-wrap justify-center;
+}
+
+.radio-button {
+    @apply px-1;
+}
+
+.radio-button input {
+    @apply absolute outline-none opacity-0;
+    z-index: -1;
+}
+
+.radio-button span {
+    @apply bg-white text-gray-800 align-middle py-2 px-4 cursor-pointer rounded-sm border border-gray-600;
+}
+
+.radio-button:hover span {
+    @apply text-blue-600;
+}
+
+.radio-button input:checked + span {
+    @apply bg-blue-600 text-white;
+}

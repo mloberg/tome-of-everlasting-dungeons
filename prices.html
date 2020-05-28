@@ -1,0 +1,172 @@
+---
+layout: default
+title: Price Calculator
+---
+<h1 class="font-bold text-gray-700 px-2 text-xl md:text-2xl text-center mt-12">
+    Item Price Calculator
+</h1>
+
+<div x-data="calculator()">
+    <div class="rounded h-full flex justify-center items-center mt-12">
+        <div class="rounded bg-white shadow-md h-48 w-48 p-6 flex flex-col justify-around text-center">
+            <div>
+                <p class="text-base text-gray-600">Item Cost</p>
+            </div>
+            <div>
+                <p class="text-2xl text-gray-700 font-bold">
+                    <span x-text="price"></span>gp
+                </p>
+            </div>
+            <div class="text-sm">
+                <template x-if="percentage > 0">
+                    <p class="text-red-500 mb-1">
+                        <svg class="inline-block fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M13 5.41V21a1 1 0 0 1-2 0V5.41l-5.3 5.3a1 1 0 1 1-1.4-1.42l7-7a1 1 0 0 1 1.4 0l7 7a1 1 0 1 1-1.4 1.42L13 5.4z"/></svg>
+                        <span x-text="percentage"></span>%
+                    </p>
+                </template>
+                <template x-if="percentage <= 0">
+                    <p class="text-green-500 mb-1">
+                        <svg class="inline-block fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M11 18.59V3a1 1 0 0 1 2 0v15.59l5.3-5.3a1 1 0 0 1 1.4 1.42l-7 7a1 1 0 0 1-1.4 0l-7-7a1 1 0 0 1 1.4-1.42l5.3 5.3z"/></svg>
+                        <span x-text="percentage"></span>%
+                    </p>
+                </template>
+            </div>
+        </div>
+    </div>
+
+    <div class="md:flex flex-wrap mt-12">
+        <div class="w-full md:w-1/2">
+            <div class="shadow p-4 m-4 bg-white">
+                <div class="text-left">
+                    <h3 class="mb-2 text-gray-700 text-center">Item Rarity</h3>
+                    <p class="text-grey-600 text-sm">
+                        Select the item rarity or set a base price.
+                    </p>
+                </div>
+
+                <div class="radio-group" role="radiogroup">
+                    <template x-for="r in rarity" :key="r.label">
+                        <label class="radio-button" role="radio" @change="basePrice = between(r.min, r.max)">
+                            <input type="radio" name="rarity" :value="r.label" x-model="itemRarity">
+                            <span x-text="r.label"></span>
+                        </label>
+                    </template>
+                </div>
+
+                <label class="block mt-2 text-center">
+                    <span class="text-gray-700 block">Base price</span>
+                    <input type="number" class="form-input" x-model="basePrice">
+                </label>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2">
+            <div class="shadow p-4 m-4 bg-white">
+                <div class="text-left">
+                    <h3 class="mb-2 text-gray-700">Location</h3>
+                    <p class="text-grey-600 text-sm">
+                        Where is the shop or merchant located?
+                    </p>
+                </div>
+
+                <div class="radio-group" role="radiogroup">
+                    <template x-for="l in locations" :key="l.label">
+                        <label class="radio-button" role="radio">
+                            <input type="radio" name="location" :value="l.value" x-model="modifiers.location">
+                            <span x-text="l.label"></span>
+                        </label>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2">
+            <div class="shadow p-4 m-4 bg-white">
+                <div class="text-left">
+                    <h3 class="mb-2 text-gray-700">Prosperity</h3>
+                    <p class="text-grey-600 text-sm">
+                        How prosperous is the area?
+                    </p>
+                </div>
+
+                <div class="radio-group" role="radiogroup">
+                    <template x-for="p in prosperity" :key="p.label">
+                        <label class="radio-button" role="radio">
+                            <input type="radio" name="prosperity" :value="p.value" x-model="modifiers.prosperity">
+                            <span x-text="p.label"></span>
+                        </label>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2">
+            <div class="shadow p-4 m-4 bg-white">
+                <div class="text-left">
+                    <h3 class="mb-2 text-gray-700">Competition</h3>
+                    <p class="text-grey-600 text-sm">
+                        How many other shops/merchants are there in the area?
+                    </p>
+                </div>
+
+                <div class="radio-group" role="radiogroup">
+                    <template x-for="c in competition" :key="c.label">
+                        <label class="radio-button" role="radio">
+                            <input type="radio" name="competition" :value="c.value" x-model="modifiers.competition">
+                            <span x-text="c.label"></span>
+                        </label>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2">
+            <div class="shadow p-4 m-4 bg-white">
+                <div class="text-left">
+                    <h3 class="mb-2 text-gray-700">Attitude</h3>
+                    <p class="text-grey-600 text-sm">
+                        How does the shopkeep/merchant feel towards the party?
+                    </p>
+                </div>
+
+                <div class="radio-group" role="radiogroup">
+                    <template x-for="a in attitude" :key="a.label">
+                        <label class="radio-button" role="radio">
+                            <input type="radio" name="attitude" :value="a.value" x-model="modifiers.attitude">
+                            <span x-text="a.label"></span>
+                        </label>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2">
+            <div class="shadow p-4 m-4 bg-white">
+                <div class="text-left">
+                    <h3 class="mb-2 text-gray-700">Discount</h3>
+                    <p class="text-grey-600 text-sm">
+                        <strong>Optionally</strong> apply a further discount/price
+                        increase. Contest the player's CHA (Persuasion) against
+                        the shopkeeper's WIS (Insight).<br>
+                        Effect is doubled on a crit.
+                    </p>
+                </div>
+
+                <label class="block mt-2 text-center">
+                    <span class="text-gray-700 block">Shopkeeper's WIS (Insight) roll</span>
+                    <input type="number" class="form-input" x-model="rolls.merchant.roll">
+                    <span class="text-gray-700 text-sm">Crit?</span>
+                    <input type="checkbox" class="form-checkbox" x-model="rolls.merchant.crit">
+                </label>
+                <label class="block mt-2 text-center">
+                    <span class="text-gray-700 block">Player's CHA (Persuasion) roll</span>
+                    <input type="number" class="form-input" x-model="rolls.player.roll">
+                    <span class="text-gray-700 text-sm">Crit?</span>
+                    <input type="checkbox" class="form-checkbox" x-model="rolls.player.crit">
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% link assets/js/price.js %}"></script>
