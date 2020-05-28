@@ -1,8 +1,8 @@
 <nav class="bg-white border-b-2 border-gray-300 text-gray-900 relative">
-  <div class="container mx-auto flex justify-between">
+  <div class="container mx-auto md:flex justify-between">
     <h3 class="relative block p-4 lg:p-6 text-xl text-blue-600 font-bold">
       <a href="{% link index.html %}" title="Home">{{ site.title }}</a>
-      <small class="text-gray-600 text-sm"> &middot; {{ site.tagline }}</small>
+      <small class="text-gray-600 text-sm hidden md:inline"> &middot; {{ site.tagline }}</small>
     </h3>
     <ul class="flex z-50">
       <!-- API endpoints -->
