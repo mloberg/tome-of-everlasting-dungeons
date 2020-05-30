@@ -1,0 +1,55 @@
+<footer class="text-gray-700 body-font border-t border-red-500 bg-gray-300">
+  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-no-wrap flex-wrap flex-col">
+    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 100 100" version="1.1" x="0px" y="0px">
+          <g transform="translate(0,-952.36216)"><path style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#fff;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#fff;solid-opacity:1;fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 49.999999,957.36216 -38.971335,22.4997 0,45.00064 1.290604,0.7457 37.680731,21.754 38.971337,-22.4997 0,-45.00064 -38.971337,-22.4997 z m 0,7.5949 15.565861,23.0246 -31.131722,0 15.565861,-23.0246 z m -8.4251,3.2361 -12.799072,18.9318 -9.995787,-5.7706 22.794859,-13.1612 z m 16.851427,0 22.793632,13.1599 -9.994495,5.7706 -12.799137,-18.9305 z m -42.230078,17.6348 9.997014,5.7707 -9.997014,20.55174 0,-26.32244 z m 67.607502,0 0,26.32374 -9.997079,-20.55304 9.995787,-5.7707 z m -49.759442,7.32 31.911382,0 -15.955691,27.63694 -15.955691,-27.63694 z m -4.280633,2.9219 15.567089,26.96074 -27.722796,-1.9681 12.155707,-24.99264 z m 40.472648,0 12.156935,24.99264 -27.722732,1.9681 15.565797,-26.96074 z m -45.617559,30.67114 22.797443,1.6199 0,11.5426 -22.797443,-13.1625 z m 50.763697,0 -22.79867,13.1625 0,-11.5426 22.79867,-1.6199 z"/></g>
+        </svg>
+        <span class="ml-3 text-xl">{{ site.title }}</span>
+      </a>
+      <p class="mt-2 text-sm text-gray-600">{{ site.tagline }}</p>
+    </div>
+    <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h3 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">API</h3>
+        <nav class="list-none mb-10">
+          <li>
+            <a href="{% link api/docs.html %}" class="text-gray-600 hover:text-gray-800">Documentation</a>
+          </li>
+          <li>
+            <a href="{% link api/spells.json %}" class="text-gray-600 hover:text-gray-800">Spells</a>
+          </li>
+          <li>
+            <a href="{% link api/items.json %}" class="text-gray-600 hover:text-gray-800">Items</a>
+          </li>
+          <li>
+            <a href="{% link api/index.html %}" class="text-gray-600 hover:text-gray-800">Learn More</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h3 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">DM Tools</h3>
+        <nav class="list-none mb-10">
+          <li>
+            <a href="{% link tools/price.html %}" class="text-gray-600 hover:text-gray-800">Price Calculator</a>
+          </li>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gray-200">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-500 text-sm text-center sm:text-left">
+        Dungeons & Dragons and D&D are property of Wizards of the Coast LLC in the U.S.A. and other countries. ©2020 Wizards.<br>
+        {{ site.title }} is not affiliated with, endorsed, sponsored, or approved by Wizards of the Coast LLC.<br>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <a href="https://github.com/mloberg/dnd5e-api" class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M13.18 11.309c-.718 0-1.3.807-1.3 1.799 0 .994.582 1.801 1.3 1.801s1.3-.807 1.3-1.801c-.001-.992-.582-1.799-1.3-1.799zm4.526-4.683c.149-.365.155-2.439-.635-4.426 0 0-1.811.199-4.551 2.08-.575-.16-1.548-.238-2.519-.238-.973 0-1.945.078-2.52.238C4.74 2.399 2.929 2.2 2.929 2.2c-.789 1.987-.781 4.061-.634 4.426C1.367 7.634.8 8.845.8 10.497c0 7.186 5.963 7.301 7.467 7.301l1.734.002 1.732-.002c1.506 0 7.467-.115 7.467-7.301 0-1.652-.566-2.863-1.494-3.871zm-7.678 10.289h-.056c-3.771 0-6.709-.449-6.709-4.115 0-.879.31-1.693 1.047-2.369C5.537 9.304 7.615 9.9 9.972 9.9h.056c2.357 0 4.436-.596 5.664.531.735.676 1.045 1.49 1.045 2.369 0 3.666-2.937 4.115-6.709 4.115zm-3.207-5.606c-.718 0-1.3.807-1.3 1.799 0 .994.582 1.801 1.3 1.801.719 0 1.301-.807 1.301-1.801 0-.992-.582-1.799-1.301-1.799z"></path>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>

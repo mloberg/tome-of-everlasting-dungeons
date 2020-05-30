@@ -1,198 +1,21 @@
-<nav class="bg-white border-b-2 border-gray-300 text-gray-900 relative">
-  <div class="container mx-auto md:flex justify-between">
-    <h3 class="relative block p-4 lg:p-6 text-xl text-blue-600 font-bold">
-      <a href="{% link index.html %}" title="Home">{{ site.title }}</a>
-      <small class="text-gray-600 text-sm hidden md:inline"> &middot; {{ site.tagline }}</small>
-    </h3>
-    <ul class="flex z-50">
-      <!-- DM Tools -->
-      <li class="toggleable hover:bg-blue-800 hover:text-white" x-data="{ open: false }" x-on:mouseover="open = true" x-on:mouseleave="open = false">
-        <input type="checkbox" value="selected" id="toggle-dm" class="toggle-input" x-model="open">
-        <label for="toggle-dm" class="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold">DM Tools</label>
-        <div role="toggle" class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-blue-800">
-          <div class="container mx-auto w-full flex flex-wrap mx-2">
-            <div class="w-full text-white mb-8">
-              <h2 class="font-bold text-2xl">Dungeon Master Tools</h2>
-              <p>Resources for running your games.</p>
-            </div>
-            <!-- Price calculator -->
-            <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-              <div class="flex items-center">
-                <svg class="h-8 mb-3 mr-3 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-11v2h1a3 3 0 0 1 0 6h-1v1a1 1 0 0 1-2 0v-1H8a1 1 0 0 1 0-2h3v-2h-1a3 3 0 0 1 0-6h1V6a1 1 0 0 1 2 0v1h3a1 1 0 0 1 0 2h-3zm-2 0h-1a1 1 0 1 0 0 2h1V9zm2 6h1a1 1 0 0 0 0-2h-1v2z"/>
-                </svg>
-                <h3 class="font-bold text-xl text-white text-bold mb-2">Price Calculator</h3>
-              </div>
-              <p class="text-gray-100 text-sm">Determine a price for a magical item. Takes into account local economy and shop/party relationship.</p>
-              <div class="flex items-center py-3">
-                <svg class="h-6 pr-3 fill-current text-blue-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path class="heroicon-ui" d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z"/>
-                </svg>
-                <a href="{% link prices.html %}" class="text-white bold border-b-2 border-blue-300 hover:text-blue-300">Calculator</a>
-              </div>
-            </ul>
-            <!-- Third party links -->
-            <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
-              <h3 class="font-bold text-xl text-white text-bold">Third-Party Tools</h3>
-              <li>
-                <a href="https://www.fantasynamegenerators.com/" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">
-                  <span class="flex items-center">
-                    Fantasy name generators
-                    <svg class="h-6 pl-3 fill-current text-blue-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path class="heroicon-ui" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41zM17 14a1 1 0 0 1 2 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h5a1 1 0 0 1 0 2H5v12h12v-5z"/>
-                    </svg>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <!-- API endpoints -->
-      <li class="toggleable hover:bg-blue-800 hover:text-white" x-data="{ open: false }" x-on:mouseover="open = true" x-on:mouseleave="open = false">
-        <input type="checkbox" value="selected" id="toggle-api" class="toggle-input" x-model="open">
-        <label for="toggle-api" class="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold">API</label>
-        <div role="toggle" class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-blue-800">
-          <div class="container mx-auto w-full flex flex-wrap mx-2">
-            <div class="w-full text-white mb-8">
-              <h2 class="font-bold text-2xl">5e APIs</h2>
-              <p>Build your own tools using these JSON APIs.</p>
-            </div>
-            <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b mt-4 sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
-              <h3 class="font-bold text-xl text-white text-bold">API Endpoints</h3>
-              <li>
-                <a href="{% link api/spells.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">All Spells</a>
-              </li>
-              <li>
-                <a href="{% link api/items.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">All Items</a>
-              </li>
-              <li>
-                <a href="{% link docs.html %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">API Documentation</a>
-              </li>
-              <li>
-                <a href="{% link api/openapi.yaml %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">OpenAPI Specification</a>
-              </li>
-            </ul>
-            <!-- Spells -->
-            <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b mt-4 sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
-              <h3 class="font-bold text-xl text-white text-bold">Spells by Class</h3>
-              <li>
-                <a href="{% link api/spells/class/bard.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Bard Spells</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/class/cleric.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Cleric Spells</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/class/druid.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Druid Spells</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/class/paladin.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Paladin Spells</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/class/ranger.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Ranger Spells</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/class/warlock.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Warlock Spells</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/class/wizard.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Wizard Spells</a>
-              </li>
-            </ul>
-            <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b mt-4 sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
-              <h3 class="font-bold text-xl text-white text-bold">Spells by Level</h3>
-              <li>
-                <a href="{% link api/spells/level/cantrip.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Cantrips</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/level/1st.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">1st</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/level/2nd.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">2nd</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/level/3rd.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">3rd</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/level/4th.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">4th</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/level/5th.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">5th</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/level/6th.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">6th</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/level/7th.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">7th</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/level/8th.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">8th</a>
-              </li>
-              <li>
-                <a href="{% link api/spells/level/9th.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">9th</a>
-              </li>
-            </ul>
-            <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b mt-4 sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
-              <h3 class="font-bold text-xl text-white text-bold">Items by Rarity</h3>
-              <li>
-                <a href="{% link api/items/rarity/common.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Common</a>
-              </li>
-              <li>
-                <a href="{% link api/items/rarity/uncommon.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Uncommon</a>
-              </li>
-              <li>
-                <a href="{% link api/items/rarity/rare.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Rare</a>
-              </li>
-              <li>
-                <a href="{% link api/items/rarity/very-rare.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Very Rare</a>
-              </li>
-              <li>
-                <a href="{% link api/items/rarity/legendary.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Legendary</a>
-              </li>
-            </ul>
-            <ul class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b mt-4 sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3">
-              <h3 class="font-bold text-xl text-white text-bold">Items by Type</h3>
-              <li>
-                <a href="{% link api/items/type/armor.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Armor</a>
-              </li>
-              <li>
-                <a href="{% link api/items/type/potion.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Potion</a>
-              </li>
-              <li>
-                <a href="{% link api/items/type/ring.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Ring</a>
-              </li>
-              <li>
-                <a href="{% link api/items/type/rod.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Rod</a>
-              </li>
-              <li>
-                <a href="{% link api/items/type/scroll.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Scroll</a>
-              </li>
-              <li>
-                <a href="{% link api/items/type/staff.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Staff</a>
-              </li>
-              <li>
-                <a href="{% link api/items/type/wand.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Wand</a>
-              </li>
-              <li>
-                <a href="{% link api/items/type/weapon.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Weapon</a>
-              </li>
-              <li>
-                <a href="{% link api/items/type/wondrous.json %}" class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white">Wondrous Item</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li class="hover:bg-blue-800 hover:text-white">
-        <a href="https://github.com/mloberg/dnd5e-api" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-bold">
-          <span class="flex items-center">
-            Source
-            <svg class="h-6 pl-3 fill-current text-blue-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path class="heroicon-ui" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41zM17 14a1 1 0 0 1 2 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h5a1 1 0 0 1 0 2H5v12h12v-5z"/>
-            </svg>
-          </span>
-        </a>
-      </li>
-      <li class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base">v{{ site.version }}</li>
-    </ul>
+<header class="text-gray-700 body-font border-b-2 border-red-500">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a href="{% link index.html %}" class="flex font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 100 100" version="1.1" x="0px" y="0px">
+        <g transform="translate(0,-952.36216)"><path style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#fff;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#fff;solid-opacity:1;fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 49.999999,957.36216 -38.971335,22.4997 0,45.00064 1.290604,0.7457 37.680731,21.754 38.971337,-22.4997 0,-45.00064 -38.971337,-22.4997 z m 0,7.5949 15.565861,23.0246 -31.131722,0 15.565861,-23.0246 z m -8.4251,3.2361 -12.799072,18.9318 -9.995787,-5.7706 22.794859,-13.1612 z m 16.851427,0 22.793632,13.1599 -9.994495,5.7706 -12.799137,-18.9305 z m -42.230078,17.6348 9.997014,5.7707 -9.997014,20.55174 0,-26.32244 z m 67.607502,0 0,26.32374 -9.997079,-20.55304 9.995787,-5.7707 z m -49.759442,7.32 31.911382,0 -15.955691,27.63694 -15.955691,-27.63694 z m -4.280633,2.9219 15.567089,26.96074 -27.722796,-1.9681 12.155707,-24.99264 z m 40.472648,0 12.156935,24.99264 -27.722732,1.9681 15.565797,-26.96074 z m -45.617559,30.67114 22.797443,1.6199 0,11.5426 -22.797443,-13.1625 z m 50.763697,0 -22.79867,13.1625 0,-11.5426 22.79867,-1.6199 z"/></g>
+      </svg>
+      <span class="ml-3 text-xl">{{ site.title }}</span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <a href="{% link api/index.html %}" class="mr-5 hover:text-gray-900">API</a>
+      <a href="{% link tools/index.html %}" class="mr-5 hover:text-gray-900">DM Tools</a>
+      <a href="https://github.com/mloberg/dnd5e-api" class="mr-5 hover:text-gray-900 inline-flex">
+        Source
+        <svg class="w-4 h-4 ml-1 mt-1 fill-current" viewBox="0 0 24 24">
+          <path d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41zM17 14a1 1 0 0 1 2 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h5a1 1 0 0 1 0 2H5v12h12v-5z"/>
+        </svg>
+      </a>
+      <p class="text-sm text-gray-600">v{{ site.version }}</p>
+    </nav>
   </div>
-</nav>
+</header>

@@ -1,8 +1,21 @@
 ---
 layout: default
 ---
-
-<div class="page">
-  <h1 class="page-title">{{ page.title }}</h1>
-  {{ content }}
+<div class="relative py-32 bg-black bg-opacity-50">
+  <div class="absolute top-0 left-0 h-full w-full -z-1 bg-bottom bg-no-repeat bg-cover bg-fixed" style="background-image: url({% link images/yazgi-QuP5RL_E5oE.jpg %});"></div>
+  <div class="container mx-auto w-1/2 pb-4 border-b-4 border-red-800">
+    <h1 class="text-center text-white text-5xl uppercase font-display">
+      {% if page.title == "Home" %}
+        {{ site.title }}
+      {% else %}
+        {{ page.title }}
+      {% endif %}
+    </h1>
+  </div>
+  <div class="container mx-auto mt-8 font-body">
+    <h2 class="text-white text-center text-xl">{% if page.url == "/" %}{{ site.description }}{% else %}{{ page.subtitle }}{% endif %}</h2>
+  </div>
 </div>
+<main class="container w-full mx-auto px-2 font-body">
+  {{ content }}
+</main>

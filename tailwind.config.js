@@ -5,10 +5,18 @@ module.exports = {
     "./_assets/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "display": ["Oswald", "sans-serif"],
+        "body": ["Open\ Sans", "sans-serif"],
+      },
+      zIndex: {
+        "-1": "-1",
+      },
+    },
   },
   variants: {},
   plugins: [
-    require('@tailwindcss/custom-forms'),
+    require("@tailwindcss/custom-forms"),
   ],
 }
