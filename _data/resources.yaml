@@ -1,0 +1,16 @@
+- title: Character Management
+  description: Manage and build characters
+  resources:
+    - name: D&D Beyond - Character Sheets
+      url: https://www.dndbeyond.com/my-characters
+      description: Online character sheets
+
+- title: Campaign Management
+  description: Manage and track your campaign
+  resources:
+    - name: D&D Beyond - Campaign Management
+      url: https://www.dndbeyond.com/my-campaigns
+      description: See your party's character sheets and share official content with them.
+    - name: Obsidian Portal
+      url: https://www.obsidianportal.com/
+      description: Wiki and more
