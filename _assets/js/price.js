@@ -1,3 +1,5 @@
+import "alpinejs";
+
 window.calculator = () => {
     return {
         itemRarity: "Uncommon",
@@ -7,10 +9,26 @@ window.calculator = () => {
             prosperity: null,
             competition: null,
             attitude: null,
+            shoptype: null,
         },
         rolls: {
-            merchant: { roll: null, crit: false },
+            merchant: { roll: 10, crit: false },
             player: { roll: null, crit: false },
+        },
+
+        reset() {
+            if (!confirm("Are you sure?")) {
+                return;
+            }
+            this.modifiers.location = null;
+            this.modifiers.prosperity = null;
+            this.modifiers.competition = null;
+            this.modifiers.attitude = null;
+            this.modifiers.shoptype = null;
+            this.rolls.merchant.roll = 10;
+            this.rolls.merchant.crit = false;
+            this.rolls.player.roll = null;
+            this.rolls.player.crit = false;
         },
 
         get percentage() {
@@ -100,13 +118,18 @@ window.calculator = () => {
             { label: "Lots", value: 0.9 },
         ],
         attitude: [
-            { label: "Admire", value: 0.9},
-            { label: "Appreciate", value: 1},
-            { label: "Like", value: 1.1},
-            { label: "Indifferent", value: 1.2},
-            { label: "Hate", value: 1.3},
-            { label: "Despise", value: 1.4},
-            { label: "Abhor", value: 1.5},
+            { label: "Admire", value: 0.9 },
+            { label: "Appreciate", value: 1 },
+            { label: "Like", value: 1.1 },
+            { label: "Indifferent", value: 1.2 },
+            { label: "Hate", value: 1.3 },
+            { label: "Despise", value: 1.4 },
+            { label: "Abhor", value: 1.5 },
+        ],
+        shoptype: [
+            { label: "Travelling", value: 1.1 },
+            { label: "General", value: 1.0 },
+            { label: "Specialty", value: 0.95, },
         ],
     };
 };

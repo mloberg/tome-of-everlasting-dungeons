@@ -4,7 +4,7 @@ title: Magic Item Price Calculator
 ---
 <div x-data="calculator()">
     <div class="rounded h-full flex justify-center items-center mt-12">
-        <div class="rounded bg-white shadow-md h-48 w-48 p-6 flex flex-col justify-around text-center">
+        <div class="rounded bg-white shadow-md h-64 w-64 p-6 flex flex-col justify-around text-center">
             <div>
                 <p class="text-base text-gray-600">Item Cost</p>
             </div>
@@ -27,6 +27,9 @@ title: Magic Item Price Calculator
                     </p>
                 </template>
             </div>
+            <div class="inline-flex justify-center">
+                <button @click="reset" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mx-2">Reset</button>
+            </div>
         </div>
     </div>
 
@@ -34,7 +37,7 @@ title: Magic Item Price Calculator
         <div class="w-full md:w-1/2">
             <div class="shadow p-4 m-4 bg-white">
                 <div class="text-left">
-                    <h3 class="mb-2 text-gray-700 text-center">Item Rarity</h3>
+                    <h3 class="mb-2 text-gray-700">Item Rarity</h3>
                     <p class="text-grey-600 text-sm">
                         Select the item rarity or set a base price.
                     </p>
@@ -58,11 +61,12 @@ title: Magic Item Price Calculator
 
         <div class="w-full md:w-1/2">
             <div class="shadow p-4 m-4 bg-white">
-                <div class="text-left">
+                <div class="text-left relative">
                     <h3 class="mb-2 text-gray-700">Location</h3>
                     <p class="text-grey-600 text-sm">
                         Where is the shop or merchant located?
                     </p>
+                    <button class="absolute right-0 top-0 bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded" @click="modifiers.location = null">Reset</button>
                 </div>
 
                 <div class="radio-group" role="radiogroup">
@@ -78,11 +82,12 @@ title: Magic Item Price Calculator
 
         <div class="w-full md:w-1/2">
             <div class="shadow p-4 m-4 bg-white">
-                <div class="text-left">
+                <div class="text-left relative">
                     <h3 class="mb-2 text-gray-700">Prosperity</h3>
                     <p class="text-grey-600 text-sm">
                         How prosperous is the area?
                     </p>
+                    <button class="absolute right-0 top-0 bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded" @click="modifiers.prosperity = null">Reset</button>
                 </div>
 
                 <div class="radio-group" role="radiogroup">
@@ -98,11 +103,12 @@ title: Magic Item Price Calculator
 
         <div class="w-full md:w-1/2">
             <div class="shadow p-4 m-4 bg-white">
-                <div class="text-left">
+                <div class="text-left relative">
                     <h3 class="mb-2 text-gray-700">Competition</h3>
                     <p class="text-grey-600 text-sm">
                         How many other shops/merchants are there in the area?
                     </p>
+                    <button class="absolute right-0 top-0 bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded" @click="modifiers.competition = null">Reset</button>
                 </div>
 
                 <div class="radio-group" role="radiogroup">
@@ -118,11 +124,12 @@ title: Magic Item Price Calculator
 
         <div class="w-full md:w-1/2">
             <div class="shadow p-4 m-4 bg-white">
-                <div class="text-left">
+                <div class="text-left relative">
                     <h3 class="mb-2 text-gray-700">Attitude</h3>
                     <p class="text-grey-600 text-sm">
                         How does the shopkeep/merchant feel towards the party?
                     </p>
+                    <button class="absolute right-0 top-0 bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded" @click="modifiers.attitude = null">Reset</button>
                 </div>
 
                 <div class="radio-group" role="radiogroup">
@@ -138,14 +145,53 @@ title: Magic Item Price Calculator
 
         <div class="w-full md:w-1/2">
             <div class="shadow p-4 m-4 bg-white">
-                <div class="text-left">
-                    <h3 class="mb-2 text-gray-700">Discount</h3>
+                <div class="text-left relative">
+                    <h3 class="mb-2 text-gray-700">Shop Type</h3>
                     <p class="text-grey-600 text-sm">
-                        <strong>Optionally</strong> apply a further discount/price
-                        increase. Contest the player's CHA (Persuasion) against
-                        the shopkeeper's WIS (Insight).<br>
-                        Effect is doubled on a crit.
+                        Is this a general store, a specialty shop, or a travelling merchant?
                     </p>
+                    <button class="absolute right-0 top-0 bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded" @click="modifiers.shoptype = null">Reset</button>
+                </div>
+
+                <div class="radio-group" role="radiogroup">
+                    <template x-for="s in shoptype" :key="s.label">
+                        <label class="radio-button" role="radio">
+                            <input type="radio" name="shoptype" :value="s.value" x-model="modifiers.shoptype">
+                            <span x-text="s.label"></span>
+                        </label>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2">
+            <div class="shadow p-4 m-4 bg-white">
+                <div class="text-left relative">
+                    <h3 class="mb-2 text-gray-700">Player's Persuasion</h3>
+                    <p class="text-grey-600 text-sm">
+                        Apply a further discount/price increase based on interaction. Have the player roll CHA (Persuasion).
+                        Consider give them advantage if they roled played the interaction well.
+                    </p>
+                    <button class="absolute right-0 top-0 bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded" @click="rolls.player.roll = null; rolls.player.crit = false">Reset</button>
+                </div>
+
+                <label class="block mt-2 text-center">
+                    <span class="text-gray-700 block">Player's CHA (Persuasion) roll</span>
+                    <input type="number" class="form-input" x-model="rolls.player.roll">
+                    <span class="text-gray-700 text-sm">Crit?</span>
+                    <input type="checkbox" class="form-checkbox" x-model="rolls.player.crit">
+                </label>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2">
+            <div class="shadow p-4 m-4 bg-white">
+                <div class="text-left relative">
+                    <h3 class="mb-2 text-gray-700">Shopkeeper's Insight</h3>
+                    <p class="text-grey-600 text-sm">
+                        Does the shopkeeper think they can get more money out of the players? Roll WIS (Insight).
+                    </p>
+                    <button class="absolute right-0 top-0 bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded" @click="rolls.merchant.roll = 10; rolls.merchant.crit = false">Reset</button>
                 </div>
 
                 <label class="block mt-2 text-center">
@@ -153,12 +199,6 @@ title: Magic Item Price Calculator
                     <input type="number" class="form-input" x-model="rolls.merchant.roll">
                     <span class="text-gray-700 text-sm">Crit?</span>
                     <input type="checkbox" class="form-checkbox" x-model="rolls.merchant.crit">
-                </label>
-                <label class="block mt-2 text-center">
-                    <span class="text-gray-700 block">Player's CHA (Persuasion) roll</span>
-                    <input type="number" class="form-input" x-model="rolls.player.roll">
-                    <span class="text-gray-700 text-sm">Crit?</span>
-                    <input type="checkbox" class="form-checkbox" x-model="rolls.player.crit">
                 </label>
             </div>
         </div>
