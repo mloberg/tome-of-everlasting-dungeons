@@ -8,3 +8,6 @@ version: 0.0.1
 exclude:
   - "package*.json"
   - "*.config.js"
+  - netlify.toml
+  - README.md
+  - LICENSE
