@@ -4,7 +4,7 @@ description: Tools, links, resources, APIs, and more to help you run your Dungeo
 permalink: /:slugified_categories/:title/
 
 github: https://github.com/mloberg/tome-of-everlasting-dungeons
-version: 0.0.1
+version: 1.0.0
 
 exclude:
   - "package*.json"
