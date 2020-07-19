@@ -1,0 +1,52 @@
+- title: Character Management
+  description: Manage and build characters.
+  resources:
+    - name: D&D Beyond - Character Sheets
+      url: https://www.dndbeyond.com/my-characters
+      description: Manage levels, items, spells, and more about your character.
+
+- title: Campaign Management
+  description: Manage and track your campaign
+  resources:
+    - name: D&D Beyond - Campaign Management
+      url: https://www.dndbeyond.com/my-campaigns
+      description: See your party's character sheets and share official content with them.
+    - name: Obsidian Portal
+      url: https://www.obsidianportal.com/
+      description: Manage your campaign with a wiki, adventure tracking, characters, and more.
+
+- title: Dungeon Building
+  description: Tools and resources to help you build your dungeons.
+  resources:
+    - name: Dungeon Scrawl
+      url: https://probabletrain.itch.io/dungeon-scrawl
+      description: Draw and create dungeons with this free web app.
+    - name: Random Dungeon Map Generator
+      url: http://www.gozzys.com/dungeon-maps
+      description: Generate random dungeon maps.
+
+- title: Encounter Tools
+  description: Plan and run encounters.
+  resources:
+    - name: D&D Beyond - Encounter Builder
+      url: https://www.dndbeyond.com/encounter-builder
+      description: Easiest way to build and run encounters.
+    - name: Encounter Generator
+      url: https://5e.tools/encountergen.html
+      description: Generate random encounters by level and environment.
+    - name: CR Calculator
+      url: https://5e.tools/crcalculator.html
+      description: Calculate the CR for a homebrew or modified monster.
+    - name: Loot Generator
+      url: https://5e.tools/lootgen.html
+      description: Generate treasure for encounters, roll treasure tables, or magical items for the party.
+
+- title: World Building
+  description: Tools and resources to help you build out homebrew worlds.
+  resources:
+    - name: Medieval Fantasy City Generator
+      url: https://watabou.itch.io/medieval-fantasy-city-generator
+      description: Generate random fantasy cities.
+    - name: Fantasy Name Generators
+      url: https://www.fantasynamegenerators.com/
+      description: Generate random names for different fantasy races, shops, and more.
