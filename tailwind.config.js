@@ -2,6 +2,7 @@ module.exports = {
   purge: [
     "./**/*.html",
     "./**/*.md",
+    "./**/*.svg",
     "./_assets/**/*.js",
   ],
   theme: {
