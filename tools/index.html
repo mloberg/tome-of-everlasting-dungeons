@@ -4,14 +4,16 @@ title: DM Tools & Resources
 ---
 <section class="text-gray-700 body-font mt-4">
   <nav class="flex flex-wrap text-center list-none">
-    <li class="lg:w-1/3 mb-1 w-1/2 mt-12">
-      <a href="#first-party" class="text-gray-600 hover:text-gray-800 underline">Things We've Built</a>
-    </li>
-    {% for resources in site.data.resources %}
+    <ul>
       <li class="lg:w-1/3 mb-1 w-1/2 mt-12">
-        <a href="#{{ resources.title|slugify }}" class="text-gray-600 hover:text-gray-800 underline">{{ resources.title }}</a>
+        <a href="#first-party" class="hover:text-gray-800 underline">Things We've Built</a>
       </li>
-    {% endfor %}
+      {% for resources in site.data.resources %}
+        <li class="lg:w-1/3 mb-1 w-1/2 mt-12">
+          <a href="#{{ resources.title|slugify }}" class="hover:text-gray-800 underline">{{ resources.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
   </nav>
 </section>
 
@@ -37,7 +39,7 @@ title: DM Tools & Resources
           <div class="text-base leading-relaxed mt-2">
             {{ page.excerpt }}
           </div>
-          <a href="{{ page.url }}" class="text-red-500 inline-flex items-center mt-3">
+          <a href="{{ page.url }}" class="text-red-700 inline-flex items-center mt-3">
             {{ page.cta | default: "Learn More" }}
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -68,7 +70,7 @@ title: DM Tools & Resources
             <div class="text-base leading-relaxed mt-2">
               {{ resource.description }}
             </div>
-            <a href="{{ resource.url }}" class="text-red-500 inline-flex items-center mt-3">
+            <a href="{{ resource.url }}" class="text-red-700 inline-flex items-center mt-3">
               View
               <svg class="w-4 h-4 ml-1 mt-1 fill-current" viewBox="0 0 24 24">
                 <path d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41zM17 14a1 1 0 0 1 2 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h5a1 1 0 0 1 0 2H5v12h12v-5z"/>
@@ -90,7 +92,7 @@ title: DM Tools & Resources
       </p>
     </div>
     <div class="text-center px-8 sm:px-0">
-      <a href="{{ site.github }}" class="text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Get Started</a>
+      <a href="{{ site.github }}" class="text-white bg-red-700 border-0 py-2 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Get Started</a>
     </div>
   </div>
 </section>
