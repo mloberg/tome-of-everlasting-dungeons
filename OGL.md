@@ -1,4 +1,5 @@
 ---
+sitemap: false
 ---
 OPEN GAME LICENSE Version 1.0a
 

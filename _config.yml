@@ -3,6 +3,7 @@ tagline: Tools and resources for running your D&D games.
 description: Tools, links, resources, APIs, and more to help you run your Dungeons and Dragons games.
 permalink: /:slugified_categories/:title/
 
+url: https://everlastingdungeons.com
 github: https://github.com/mloberg/tome-of-everlasting-dungeons
 version: 1.0.0
 
