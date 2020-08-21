@@ -14,7 +14,7 @@
         "@tailwindcss/custom-forms": "^0.2.1",
         "autoprefixer": "^9.8.6",
         "postcss-loader": "^3.0.0",
-        "tailwindcss": "^1.7.2"
+        "tailwindcss": "^1.7.3"
     },
     "devDependencies": {
         "concurrently": "^5.3.0"
