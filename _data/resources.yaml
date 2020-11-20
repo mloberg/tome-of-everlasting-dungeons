@@ -1,10 +1,3 @@
-- title: Character Management
-  description: Manage and build characters.
-  resources:
-    - name: D&D Beyond - Character Sheets
-      url: https://www.dndbeyond.com/my-characters
-      description: Manage levels, items, spells, and more about your character.
-
 - title: Campaign Management
   description: Manage and track your campaign
   resources:
@@ -15,6 +8,17 @@
       url: https://www.obsidianportal.com/
       description: Manage your campaign with a wiki, adventure tracking, characters, and more.
 
+- title: Character Tools
+  description: Manage and play your characters.
+  resources:
+    - name: D&D Beyond - Character Sheets
+      url: https://www.dndbeyond.com/my-characters
+      description: Manage levels, items, spells, and more about your character.
+    - name: Jump Calculator
+      url: https://fexlabs.com/5ejump/
+      description: >
+        How far exactly can my character jump? Type in your stats and get your both your high and long jump distances.
+
 - title: Dungeon Building
   description: Tools and resources to help you build your dungeons.
   resources:
@@ -24,6 +28,12 @@
     - name: Random Dungeon Map Generator
       url: http://www.gozzys.com/dungeon-maps
       description: Generate random dungeon maps.
+    - name: DungeonDraft
+      url: https://dungeondraft.net/
+      description: Simple desktop application to build dungeons.
+    - name: DungeonFog
+      url: https://www.dungeonfog.com
+      description: Create maps online or modify a map someone else has created.
 
 - title: Encounter Tools
   description: Plan and run encounters.
@@ -41,6 +51,16 @@
       url: https://5e.tools/lootgen.html
       description: Generate treasure for encounters, roll treasure tables, or magical items for the party.
 
+- title: Running the Game
+  description: Tools and resources to help you run your game.
+  resources:
+    - name: Roll20
+      url: https://roll20.net/welcome
+      description: Run games online with a virtual tabletop. Import maps, run combat, and more.
+    - name: Tabletop Audio
+      url: https://tabletopaudio.com
+      description: Bring your game to the next level by using music and ambience to set the mood.
+
 - title: World Building
   description: Tools and resources to help you build out homebrew worlds.
   resources:
@@ -50,3 +70,6 @@
     - name: Fantasy Name Generators
       url: https://www.fantasynamegenerators.com/
       description: Generate random names for different fantasy races, shops, and more.
+    - name: WonderDraft
+      url: https://www.wonderdraft.net/
+      description: Desktop application to create fantasy maps.
