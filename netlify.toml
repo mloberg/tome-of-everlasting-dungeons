@@ -2,6 +2,10 @@
   command = "npm run prod && jekyll build"
   publish = "_site/"
 
+[build.environment]
+  NODE_VERSION = "14.15.1"
+  NETLIFY = "TRUE"
+
 [context.production.environment]
   JEKYLL_ENV = "production"
   NODE_ENV = "production"

@@ -6,7 +6,7 @@
         "prod": "encore prod",
         "watch:webpack": "encore dev --watch",
         "watch:jekyll": "bundle exec jekyll serve --livereload --drafts --open",
-        "postinstall": "bundle install --path=vendor/bundle --jobs=4 --retry=3"
+        "postinstall": "test -n \"$NETLIFY\" || bundle install --path=vendor/bundle --jobs=4 --retry=3"
     },
     "dependencies": {
         "@symfony/webpack-encore": "^0.31.0",
