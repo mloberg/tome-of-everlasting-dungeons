@@ -27,12 +27,12 @@ cta: Try out the calculator
 
           <label class="block mt-2">
             <span class="text-gray-700">Base Price</span>
-            <input class="form-input mt-1 w-full" x-model="basePrice">
+            <input type="text" class="mt-1 block w-full" x-model="basePrice">
           </label>
 
           <label class="block mt-2">
             <span class="text-gray-700">Adjustment</span>
-            <input class="block mt-1 w-full" type="range" min="-100" max="100" x-model="adjustment">
+            <input type="range" class="block mt-1 w-full cursor-pointer focus:outline-none" min="-100" max="100" x-model="adjustment">
             <p class="text-center">
               <span x-text="adjustment"></span>%
             </p>
