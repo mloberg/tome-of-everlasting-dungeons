@@ -14,7 +14,7 @@
         "alpinejs": "^2.8.0",
         "autoprefixer": "^10.2.3",
         "postcss": "^8.2.4",
-        "postcss-loader": "^4.1.0",
+        "postcss-loader": "^5.0.0",
         "tailwindcss": "^2.0.3"
     },
     "devDependencies": {
