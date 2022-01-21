@@ -9,7 +9,7 @@
         "postinstall": "test -n \"$NETLIFY\" || bundle install --path=vendor/bundle --jobs=4 --retry=3"
     },
     "dependencies": {
-        "@symfony/webpack-encore": "^1.7.0",
+        "@symfony/webpack-encore": "^1.8.1",
         "@tailwindcss/forms": "^0.3.4",
         "alpinejs": "^3.7.0",
         "autoprefixer": "^10.4.2",
