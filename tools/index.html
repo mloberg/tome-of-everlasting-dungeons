@@ -2,97 +2,105 @@
 layout: page
 title: DM Tools & Resources
 ---
-<section class="text-gray-700 body-font mt-4">
+
+<section class="body-font mt-4 text-gray-700">
   <nav>
-    <ul class="grid grid-cols-2 lg:grid-cols-3 gap-4 text-center list-none">
+    <ul class="grid list-none grid-cols-2 gap-4 text-center lg:grid-cols-3">
       <li class="mb-1 mt-12">
-        <a href="#first-party" class="hover:text-gray-800 underline">Things We've Built</a>
+        <a href="#first-party" class="underline hover:text-gray-800">Things We've Built</a>
       </li>
       {% for resources in site.data.resources %}
-        <li class="mb-1 mt-12">
-          <a href="#{{ resources.title|slugify }}" class="hover:text-gray-800 underline">{{ resources.title }}</a>
-        </li>
+      <li class="mb-1 mt-12">
+        <a href="#{{ resources.title|slugify }}" class="underline hover:text-gray-800">{{ resources.title }}</a>
+      </li>
       {% endfor %}
     </ul>
   </nav>
 </section>
 
-<section class="text-gray-700 body-font">
-  <div class="container px-5 py-24 mx-auto">
+<section class="body-font text-gray-700">
+  <div class="container mx-auto px-5 py-24">
     <div id="first-party" class="flex flex-col">
-      <div class="h-1 bg-gray-200 rounded overflow-hidden">
-        <div class="w-24 h-full bg-red-500"></div>
+      <div class="h-1 overflow-hidden rounded bg-gray-200">
+        <div class="h-full w-24 bg-red-500"></div>
       </div>
-      <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-        <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Things We've Built</h1>
-        <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">
+      <div class="mb-12 flex flex-col flex-wrap py-6 sm:flex-row">
+        <h1 class="title-font mb-2 text-2xl font-medium text-gray-900 sm:mb-0 sm:w-2/5">Things We've Built</h1>
+        <p class="pl-0 text-base leading-relaxed sm:w-3/5 sm:pl-10">
           Necessity is the mother of invention. Here are things we've built that we use in our own games. These are open
           source, so feel free to contibute to them!
         </p>
       </div>
     </div>
-    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-      {%- assign internal = site.pages | where: "category", "resource-tools" -%}
-      {% for page in internal %}
-        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-          <h2 class="text-xl font-medium title-font text-gray-900">{{ page.title }}</h2>
-          <div class="text-base leading-relaxed mt-2">
-            {{ page.excerpt }}
-          </div>
-          <a href="{{ page.redirect_to | default: page.url }}" class="text-red-700 inline-flex items-center mt-3">
-            {{ page.cta | default: "Learn More" }}
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </a>
-        </div>
+    <div class="-mx-4 -mb-10 -mt-4 flex flex-wrap sm:-m-4">
+      {%- assign internal = site.pages | where: "category", "resource-tools" -%} {% for page in internal %}
+      <div class="mb-6 p-4 sm:mb-0 md:w-1/3">
+        <h2 class="title-font text-xl font-medium text-gray-900">{{ page.title }}</h2>
+        <div class="mt-2 text-base leading-relaxed">{{ page.excerpt }}</div>
+        <a href="{{ page.redirect_to | default: page.url }}" class="mt-3 inline-flex items-center text-red-700">
+          {{ page.cta | default: "Learn More" }}
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="ml-2 h-4 w-4"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
       {% endfor %}
     </div>
   </div>
 </section>
 
 {% for resources in site.data.resources %}
-  <section class="text-gray-700 body-font">
-    <div class="container px-5 py-24 mx-auto">
-      <div id="{{ resources.title|slugify }}" class="flex flex-col">
-        <div class="h-1 bg-gray-200 rounded overflow-hidden">
-          <div class="w-24 h-full bg-red-500"></div>
-        </div>
-        <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-          <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">{{ resources.title }}</h1>
-          <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">{{ resources.description }}</p>
-        </div>
+<section class="body-font text-gray-700">
+  <div class="container mx-auto px-5 py-24">
+    <div id="{{ resources.title|slugify }}" class="flex flex-col">
+      <div class="h-1 overflow-hidden rounded bg-gray-200">
+        <div class="h-full w-24 bg-red-500"></div>
       </div>
-      <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-        {% for resource in resources.resources %}
-          <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-            <h2 class="text-xl font-medium title-font text-gray-900">{{ resource.name }}</h2>
-            <div class="text-base leading-relaxed mt-2">
-              {{ resource.description }}
-            </div>
-            <a href="{{ resource.url }}" class="text-red-700 inline-flex items-center mt-3">
-              View
-              <svg class="w-4 h-4 ml-1 mt-1 fill-current" viewBox="0 0 24 24">
-                <path d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41zM17 14a1 1 0 0 1 2 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h5a1 1 0 0 1 0 2H5v12h12v-5z"/>
-              </svg>
-            </a>
-          </div>
-        {% endfor %}
+      <div class="mb-12 flex flex-col flex-wrap py-6 sm:flex-row">
+        <h1 class="title-font mb-2 text-2xl font-medium text-gray-900 sm:mb-0 sm:w-2/5">{{ resources.title }}</h1>
+        <p class="pl-0 text-base leading-relaxed sm:w-3/5 sm:pl-10">{{ resources.description }}</p>
       </div>
     </div>
-  </section>
+    <div class="-mx-4 -mb-10 -mt-4 flex flex-wrap sm:-m-4">
+      {% for resource in resources.resources %}
+      <div class="mb-6 p-4 sm:mb-0 md:w-1/3">
+        <h2 class="title-font text-xl font-medium text-gray-900">{{ resource.name }}</h2>
+        <div class="mt-2 text-base leading-relaxed">{{ resource.description }}</div>
+        <a href="{{ resource.url }}" class="mt-3 inline-flex items-center text-red-700">
+          View
+          <svg class="ml-1 mt-1 h-4 w-4 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41zM17 14a1 1 0 0 1 2 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h5a1 1 0 0 1 0 2H5v12h12v-5z"
+            />
+          </svg>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 {% endfor %}
 
-<section class="text-gray-700 body-font">
-  <div class="container px-5 pb-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-12">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Something Missing?</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-        Contribute to this site
-      </p>
+<section class="body-font text-gray-700">
+  <div class="container mx-auto px-5 pb-24">
+    <div class="mb-12 flex w-full flex-col text-center">
+      <h1 class="title-font mb-4 text-2xl font-medium text-gray-900 sm:text-3xl">Something Missing?</h1>
+      <p class="mx-auto text-base leading-relaxed lg:w-2/3">Contribute to this site</p>
     </div>
-    <div class="text-center px-8 sm:px-0">
-      <a href="{{ site.github }}" class="text-white bg-red-700 border-0 py-2 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Get Started</a>
+    <div class="px-8 text-center sm:px-0">
+      <a
+        href="{{ site.github }}"
+        class="rounded border-0 bg-red-700 py-2 px-6 text-lg text-white hover:bg-red-800 focus:outline-none"
+        >Get Started</a
+      >
     </div>
   </div>
 </section>
