@@ -1,9 +1,12 @@
 module.exports = {
-  purge: [
-    "./**/*.html",
-    "./**/*.md",
-    "./**/*.svg",
+  content: [
     "./_assets/**/*.js",
+    // https://tailwindcss.com/docs/content-configuration#styles-rebuild-in-an-infinite-loop
+    "./_includes/**/*.{html,svg}",
+    "./_layouts/**/*.html",
+    "./api/**/*.html",
+    "./tools/**/*.html",
+    "./index.html",
   ],
   theme: {
     extend: {
@@ -11,12 +14,8 @@ module.exports = {
         "display": ["Oswald", "sans-serif"],
         "body": ["Open\ Sans", "sans-serif"],
       },
-      zIndex: {
-        "-1": "-1",
-      },
     },
   },
-  variants: {},
   plugins: [
     require("@tailwindcss/forms"),
   ],
