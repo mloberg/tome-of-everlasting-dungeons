@@ -1,11 +1,10 @@
 ---
 ---
+
 <!DOCTYPE html>
-<html class="antialiased" lang="{{ page.lang | default: site.lang | default: "en" }}">
-{% include head.html %}
-<body class="bg-gray-100 text-gray-900 font-sans tracking-wider leading-normal">
-  {% include header.html %}
-  {{ content }}
-  {% include footer.html %}
-</body>
+<html class="antialiased" lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  {% include head.html %}
+  <body class="bg-gray-100 font-sans leading-normal tracking-wider text-gray-900">
+    {% include header.html %} {{ content }} {% include footer.html %}
+  </body>
 </html>

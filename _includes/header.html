@@ -1,18 +1,20 @@
-<header class="text-gray-700 body-font border-b-2 border-red-500">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a href="{% link index.html %}" class="flex font-medium items-center text-gray-900 mb-4 md:mb-0">
+<header class="body-font border-b-2 border-red-500 text-gray-700">
+  <div class="container mx-auto flex flex-col flex-wrap items-center p-5 md:flex-row">
+    <a href="{% link index.html %}" class="mb-4 flex items-center font-medium text-gray-900 md:mb-0">
       {% include logo.svg %}
       <span class="ml-3 text-xl">{{ site.title }}</span>
     </a>
-    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+    <nav class="flex flex-wrap items-center justify-center text-base md:ml-auto">
       <a href="{% link api/index.html %}" class="mr-5 hover:text-gray-900">API</a>
       <a href="{% link tools/index.html %}" class="mr-5 hover:text-gray-900">DM Tools</a>
-      <a href="{{ site.github }}" class="mr-5 hover:text-gray-900 inline-flex" target="_blank" rel="noopener">
+      <a href="{{ site.github }}" class="mr-5 inline-flex hover:text-gray-900" target="_blank" rel="noopener">
         Source
-        <svg class="w-4 h-4 ml-1 mt-1 fill-current" viewBox="0 0 24 24">
-          <path d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41zM17 14a1 1 0 0 1 2 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h5a1 1 0 0 1 0 2H5v12h12v-5z"/>
+        <svg class="ml-1 mt-1 h-4 w-4 fill-current" viewBox="0 0 24 24">
+          <path
+            d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41zM17 14a1 1 0 0 1 2 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h5a1 1 0 0 1 0 2H5v12h12v-5z"
+          />
         </svg>
-    </a>
+      </a>
     </nav>
   </div>
 </header>

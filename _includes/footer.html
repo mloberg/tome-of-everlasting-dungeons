@@ -1,16 +1,18 @@
-<footer class="text-gray-700 body-font border-t border-red-500 bg-gray-300">
-  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
-      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+<footer class="body-font border-t border-red-500 bg-gray-300 text-gray-700">
+  <div
+    class="container mx-auto flex flex-col flex-wrap px-5 py-24 md:flex-row md:flex-nowrap md:items-center lg:items-start"
+  >
+    <div class="mx-auto mt-10 w-64 flex-shrink-0 text-center md:mx-0 md:mt-0 md:text-left">
+      <a class="title-font flex items-center justify-center font-medium text-gray-900 md:justify-start">
         {% include logo.svg %}
         <span class="ml-3 text-xl">{{ site.title }}</span>
       </a>
       <p class="mt-2 text-sm text-gray-900">{{ site.tagline }}</p>
     </div>
-    <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h3 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">API</h3>
-        <nav class="list-none mb-10">
+    <div class="order-first -mb-10 flex flex-grow flex-wrap text-center md:pr-20 md:text-left">
+      <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+        <h3 class="title-font mb-3 text-sm font-medium tracking-widest text-gray-900">API</h3>
+        <nav class="mb-10 list-none">
           <ul>
             <li class="mb-2">
               <a href="{% link api/docs.html %}" class="text-gray-700 hover:text-gray-800">Documentation</a>
@@ -27,9 +29,9 @@
           </ul>
         </nav>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h3 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">DM Tools</h3>
-        <nav class="list-none mb-10">
+      <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+        <h3 class="title-font mb-3 text-sm font-medium tracking-widest text-gray-900">DM Tools</h3>
+        <nav class="mb-10 list-none">
           <ul>
             <li class="mb-2">
               <a href="{% link tools/index.html %}" class="text-gray-700 hover:text-gray-800">Resource List</a>
@@ -43,15 +45,31 @@
     </div>
   </div>
   <div class="bg-gray-200">
-    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-gray-700 text-sm text-center sm:text-left">
-        Dungeons & Dragons and D&D are property of Wizards of the Coast LLC in the U.S.A. and other countries. ©2020 Wizards.<br>
-        {{ site.title }} is not affiliated with, endorsed, sponsored, or approved by Wizards of the Coast LLC.<br>
+    <div class="container mx-auto flex flex-col flex-wrap py-4 px-5 sm:flex-row">
+      <p class="text-center text-sm text-gray-700 sm:text-left">
+        Dungeons & Dragons and D&D are property of Wizards of the Coast LLC in the U.S.A. and other countries. ©2020
+        Wizards.<br />
+        {{ site.title }} is not affiliated with, endorsed, sponsored, or approved by Wizards of the Coast LLC.<br />
       </p>
-      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-        <a href="{{ site.github }}" class="text-gray-700 mt-1" target="_blank" rel="noopener" aria-label="GitHub Source">
-          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 inline" viewBox="0 0 24 24">
-            <path d="M13.18 11.309c-.718 0-1.3.807-1.3 1.799 0 .994.582 1.801 1.3 1.801s1.3-.807 1.3-1.801c-.001-.992-.582-1.799-1.3-1.799zm4.526-4.683c.149-.365.155-2.439-.635-4.426 0 0-1.811.199-4.551 2.08-.575-.16-1.548-.238-2.519-.238-.973 0-1.945.078-2.52.238C4.74 2.399 2.929 2.2 2.929 2.2c-.789 1.987-.781 4.061-.634 4.426C1.367 7.634.8 8.845.8 10.497c0 7.186 5.963 7.301 7.467 7.301l1.734.002 1.732-.002c1.506 0 7.467-.115 7.467-7.301 0-1.652-.566-2.863-1.494-3.871zm-7.678 10.289h-.056c-3.771 0-6.709-.449-6.709-4.115 0-.879.31-1.693 1.047-2.369C5.537 9.304 7.615 9.9 9.972 9.9h.056c2.357 0 4.436-.596 5.664.531.735.676 1.045 1.49 1.045 2.369 0 3.666-2.937 4.115-6.709 4.115zm-3.207-5.606c-.718 0-1.3.807-1.3 1.799 0 .994.582 1.801 1.3 1.801.719 0 1.301-.807 1.301-1.801 0-.992-.582-1.799-1.301-1.799z"></path>
+      <span class="mt-2 inline-flex justify-center sm:ml-auto sm:mt-0 sm:justify-start">
+        <a
+          href="{{ site.github }}"
+          class="mt-1 text-gray-700"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub Source"
+        >
+          <svg
+            fill="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="inline h-5 w-5"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M13.18 11.309c-.718 0-1.3.807-1.3 1.799 0 .994.582 1.801 1.3 1.801s1.3-.807 1.3-1.801c-.001-.992-.582-1.799-1.3-1.799zm4.526-4.683c.149-.365.155-2.439-.635-4.426 0 0-1.811.199-4.551 2.08-.575-.16-1.548-.238-2.519-.238-.973 0-1.945.078-2.52.238C4.74 2.399 2.929 2.2 2.929 2.2c-.789 1.987-.781 4.061-.634 4.426C1.367 7.634.8 8.845.8 10.497c0 7.186 5.963 7.301 7.467 7.301l1.734.002 1.732-.002c1.506 0 7.467-.115 7.467-7.301 0-1.652-.566-2.863-1.494-3.871zm-7.678 10.289h-.056c-3.771 0-6.709-.449-6.709-4.115 0-.879.31-1.693 1.047-2.369C5.537 9.304 7.615 9.9 9.972 9.9h.056c2.357 0 4.436-.596 5.664.531.735.676 1.045 1.49 1.045 2.369 0 3.666-2.937 4.115-6.709 4.115zm-3.207-5.606c-.718 0-1.3.807-1.3 1.799 0 .994.582 1.801 1.3 1.801.719 0 1.301-.807 1.301-1.801 0-.992-.582-1.799-1.301-1.799z"
+            ></path>
           </svg>
         </a>
       </span>

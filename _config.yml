@@ -7,8 +7,8 @@ url: https://everlastingdungeons.com
 github: https://github.com/mloberg/tome-of-everlasting-dungeons
 
 exclude:
-  - "package*.json"
-  - "*.config.js"
+  - 'package*.json'
+  - '*.config.js'
   - netlify.toml
   - README.md
   - LICENSE

@@ -2,280 +2,359 @@
 layout: page
 title: APIs
 ---
-<section class="text-gray-700 body-font">
-  <div class="container px-5 py-12 mx-auto">
-    <div class="text-center mb-20">
-      <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">D&D APIs</h1>
-      <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+
+<section class="body-font text-gray-700">
+  <div class="container mx-auto px-5 py-12">
+    <div class="mb-20 text-center">
+      <h1 class="title-font mb-4 text-center text-2xl font-medium text-gray-900 sm:text-3xl">D&D APIs</h1>
+      <p class="mx-auto text-base leading-relaxed lg:w-3/4 xl:w-2/4">
         Create your own tools by conuming APIs for
         <a href="{% link api/spells.json %}" class="underline">spells</a>
         and
         <a href="{% link api/items.json %}" class="underline">items</a>.
       </p>
     </div>
-    <div class="flex flex-wrap -m-4">
-      <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
-        <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left uppercase">Spells by Class</h2>
-        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1">
+    <div class="-m-4 flex flex-wrap">
+      <div class="w-full p-4 sm:w-1/2 lg:w-1/4">
+        <h2
+          class="title-font mb-4 text-center text-sm font-medium uppercase tracking-widest text-gray-900 sm:text-left"
+        >
+          Spells by Class
+        </h2>
+        <nav class="-mb-1 flex flex-col items-center text-center sm:items-start sm:text-left">
           <a href="{% link api/spells/class/bard.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             Bard
           </a>
           <a href="{% link api/spells/class/cleric.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             Cleric
           </a>
           <a href="{% link api/spells/class/druid.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             Druid
           </a>
           <a href="{% link api/spells/class/paladin.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             Paladin
           </a>
           <a href="{% link api/spells/class/ranger.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             Ranger
           </a>
           <a href="{% link api/spells/class/warlock.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             Warlock
           </a>
           <a href="{% link api/spells/class/wizard.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             Wizard
           </a>
         </nav>
       </div>
-      <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
-        <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left uppercase">Spells by level</h2>
-        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1">
+      <div class="w-full p-4 sm:w-1/2 lg:w-1/4">
+        <h2
+          class="title-font mb-4 text-center text-sm font-medium uppercase tracking-widest text-gray-900 sm:text-left"
+        >
+          Spells by level
+        </h2>
+        <nav class="-mb-1 flex flex-col items-center text-center sm:items-start sm:text-left">
           <a href="{% link api/spells/level/cantrip.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             Cantrip
           </a>
           <a href="{% link api/spells/level/1st.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             1st
           </a>
           <a href="{% link api/spells/level/2nd.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             2nd
           </a>
           <a href="{% link api/spells/level/3rd.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             3rd
           </a>
           <a href="{% link api/spells/level/4th.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             4th
           </a>
           <a href="{% link api/spells/level/5th.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             5th
           </a>
           <a href="{% link api/spells/level/6th.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             6th
           </a>
           <a href="{% link api/spells/level/7th.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             7th
           </a>
           <a href="{% link api/spells/level/8th.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             8th
           </a>
           <a href="{% link api/spells/level/9th.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M6.1 21.98a1 1 0 0 1-1.45-1.06l1.03-6.03-4.38-4.26a1 1 0 0 1 .56-1.71l6.05-.88 2.7-5.48a1 1 0 0 1 1.8 0l2.7 5.48 6.06.88a1 1 0 0 1 .55 1.7l-4.38 4.27 1.04 6.03a1 1 0 0 1-1.46 1.06l-5.4-2.85-5.42 2.85zm4.95-4.87a1 1 0 0 1 .93 0l4.08 2.15-.78-4.55a1 1 0 0 1 .29-.88l3.3-3.22-4.56-.67a1 1 0 0 1-.76-.54l-2.04-4.14L9.47 9.4a1 1 0 0 1-.75.54l-4.57.67 3.3 3.22a1 1 0 0 1 .3.88l-.79 4.55 4.09-2.15z"
+                ></path>
               </svg>
             </span>
             9th
           </a>
         </nav>
       </div>
-      <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
-        <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left uppercase">Items by Rarity</h2>
-        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1">
+      <div class="w-full p-4 sm:w-1/2 lg:w-1/4">
+        <h2
+          class="title-font mb-4 text-center text-sm font-medium uppercase tracking-widest text-gray-900 sm:text-left"
+        >
+          Items by Rarity
+        </h2>
+        <nav class="-mb-1 flex flex-col items-center text-center sm:items-start sm:text-left">
           <a href="{% link api/items/rarity/common.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"
+                ></path>
               </svg>
             </span>
             Common
           </a>
           <a href="{% link api/items/rarity/uncommon.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"
+                ></path>
               </svg>
             </span>
             Uncommon
           </a>
           <a href="{% link api/items/rarity/rare.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"
+                ></path>
               </svg>
             </span>
             Rare
           </a>
           <a href="{% link api/items/rarity/very-rare.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"
+                ></path>
               </svg>
             </span>
             Very Rare
           </a>
           <a href="{% link api/items/rarity/legendary.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"
+                ></path>
               </svg>
             </span>
             Legendary
           </a>
         </nav>
       </div>
-      <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
-        <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left uppercase">Items by Type</h2>
-        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1">
+      <div class="w-full p-4 sm:w-1/2 lg:w-1/4">
+        <h2
+          class="title-font mb-4 text-center text-sm font-medium uppercase tracking-widest text-gray-900 sm:text-left"
+        >
+          Items by Type
+        </h2>
+        <nav class="-mb-1 flex flex-col items-center text-center sm:items-start sm:text-left">
           <a href="{% link api/items/type/armor.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"
+                ></path>
               </svg>
             </span>
             Armor
           </a>
           <a href="{% link api/items/type/potion.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"
+                ></path>
               </svg>
             </span>
             Potion
           </a>
           <a href="{% link api/items/type/ring.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"
+                ></path>
               </svg>
             </span>
             Ring
           </a>
           <a href="{% link api/items/type/rod.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"
+                ></path>
               </svg>
             </span>
             Rod
           </a>
           <a href="{% link api/items/type/scroll.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"
+                ></path>
               </svg>
             </span>
             Scroll
           </a>
           <a href="{% link api/items/type/staff.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"
+                ></path>
               </svg>
             </span>
             Staff
           </a>
           <a href="{% link api/items/type/wand.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"
+                ></path>
               </svg>
             </span>
             Wand
           </a>
           <a href="{% link api/items/type/weapon.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"
+                ></path>
               </svg>
             </span>
             Weapon
           </a>
           <a href="{% link api/items/type/wondrous.json %}" class="mb-2">
-            <span class="bg-red-100 text-red-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="currentColor" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"></path>
+            <span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-100 text-red-500">
+              <svg fill="currentColor" class="h-3 w-3" viewBox="0 0 24 24">
+                <path
+                  d="M11 20v-2.08a6 6 0 0 1-4.24-3A4.02 4.02 0 0 1 2 11V6c0-1.1.9-2 2-2h2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2h2a2 2 0 0 1 2 2v5a4 4 0 0 1-4.76 3.93A6 6 0 0 1 13 17.92V20h4a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h4zm6.92-7H18a2 2 0 0 0 2-2V6h-2v6c0 .34-.03.67-.08 1zM6.08 13A6.04 6.04 0 0 1 6 12V6H4v5a2 2 0 0 0 2.08 2zM8 4v8a4 4 0 1 0 8 0V4H8z"
+                ></path>
               </svg>
             </span>
             Wondrous Item
@@ -283,8 +362,12 @@ title: APIs
         </nav>
       </div>
     </div>
-    <p class="text-center my-16 mx-auto">
-      <a href="{% link api/docs.html %}" class="text-white bg-red-700 border-0 py-2 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Full Documentation</a>
+    <p class="my-16 mx-auto text-center">
+      <a
+        href="{% link api/docs.html %}"
+        class="rounded border-0 bg-red-700 py-2 px-6 text-lg text-white hover:bg-red-800 focus:outline-none"
+        >Full Documentation</a
+      >
     </p>
   </div>
 </section>

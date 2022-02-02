@@ -5,15 +5,16 @@ category: resource-tools
 excerpt: Need to figure out how much that item magic costs? Use this Calculator! Takes local variables into consideration to determine the price of a magical item.
 cta: Try out the calculator
 ---
+
 <div x-data="calculator">
-  <div class="rounded h-full flex justify-center items-center mt-12">
+  <div class="mt-12 flex h-full items-center justify-center rounded">
     <div class="rounded bg-white shadow-md md:w-1/2">
-      <div class="text-center mt-5">
+      <div class="mt-5 text-center">
         <h2 class="text-xl font-bold" contenteditable>Item of Magical Properties</h2>
       </div>
       <div class="md:flex">
         <div class="mx-5 md:w-1/2">
-          <img class="my-5 rounded-sm" src="{% link images/magic-item.png %}" alt="magic item">
+          <img class="my-5 rounded-sm" src="{% link images/magic-item.png %}" alt="magic item" />
         </div>
         <div class="mt-4 mr-4 ml-4 md:ml-0 md:w-1/2">
           <label class="block">
@@ -25,39 +26,41 @@ cta: Try out the calculator
             </select>
           </label>
 
-          <label class="block mt-2">
+          <label class="mt-2 block">
             <span class="text-gray-700">Base Price</span>
-            <input type="text" class="mt-1 block w-full" x-model="basePrice">
+            <input type="text" class="mt-1 block w-full" x-model="basePrice" />
           </label>
 
-          <label class="block mt-2">
+          <label class="mt-2 block">
             <span class="text-gray-700">Adjustment</span>
-            <input type="range" class="block mt-1 w-full cursor-pointer focus:outline-none" min="-100" max="100" x-model="adjustment">
-            <p class="text-center">
-              <span x-text="adjustment"></span>%
-            </p>
+            <input
+              type="range"
+              class="mt-1 block w-full cursor-pointer focus:outline-none"
+              min="-100"
+              max="100"
+              x-model="adjustment"
+            />
+            <p class="text-center"><span x-text="adjustment"></span>%</p>
           </label>
 
-          <p class="font-bold text-center my-6">
-            <span x-text="price"></span>gp
-          </p>
+          <p class="my-6 text-center font-bold"><span x-text="price"></span>gp</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="md:flex flex-wrap my-12">
+  <div class="my-12 flex-wrap md:flex">
     <div class="w-full md:w-1/2">
-      <div class="shadow p-4 m-4 bg-white">
-        <h3 class="text-lg mb-2 text-center">Adjustment Calculator</h3>
+      <div class="m-4 bg-white p-4 shadow">
+        <h3 class="mb-2 text-center text-lg">Adjustment Calculator</h3>
         <p>
           <strong>Optional</strong>
           Given the local and situational variables, figure out what kind of discount/markup you would expect.
         </p>
-        <hr class="my-2">
-        <label class="block mt-2">
+        <hr class="my-2" />
+        <label class="mt-2 block">
           <span class="text-gray-700">Where is the shop or merchant located?</span>
-          <select class="form-select mt-1 w-full block" x-model="modifiers.location">
+          <select class="form-select mt-1 block w-full" x-model="modifiers.location">
             <option value="">--</option>
             <template x-for="l in locations" :key="l.label">
               <option :value="l.value" x-text="l.label"></option>
@@ -65,9 +68,9 @@ cta: Try out the calculator
           </select>
         </label>
 
-        <label class="block mt-2">
+        <label class="mt-2 block">
           <span class="text-gray-700">How prosperous is the area?</span>
-          <select class="form-select mt-1 w-full block" x-model="modifiers.prosperity">
+          <select class="form-select mt-1 block w-full" x-model="modifiers.prosperity">
             <option value="">--</option>
             <template x-for="p in prosperity" :key="p.label">
               <option :value="p.value" x-text="p.label"></option>
@@ -75,9 +78,9 @@ cta: Try out the calculator
           </select>
         </label>
 
-        <label class="block mt-2">
+        <label class="mt-2 block">
           <span class="text-gray-700">How many other shops/merchants are there in the area?</span>
-          <select class="form-select mt-1 w-full block" x-model="modifiers.competition">
+          <select class="form-select mt-1 block w-full" x-model="modifiers.competition">
             <option value="">--</option>
             <template x-for="c in competition" :key="c.label">
               <option :value="c.value" x-text="c.label"></option>
@@ -85,9 +88,9 @@ cta: Try out the calculator
           </select>
         </label>
 
-        <label class="block mt-2">
+        <label class="mt-2 block">
           <span class="text-gray-700">How does the shopkeep/merchant feel towards the party?</span>
-          <select class="form-select mt-1 w-full block" x-model="modifiers.attitude">
+          <select class="form-select mt-1 block w-full" x-model="modifiers.attitude">
             <option value="">--</option>
             <template x-for="a in attitude" :key="a.label">
               <option :value="a.value" x-text="a.label"></option>
@@ -95,9 +98,9 @@ cta: Try out the calculator
           </select>
         </label>
 
-        <label class="block mt-2">
+        <label class="mt-2 block">
           <span class="text-gray-700">Is this a general store, a specialty shop, or a travelling merchant?</span>
-          <select class="form-select mt-1 w-full block" x-model="modifiers.shoptype">
+          <select class="form-select mt-1 block w-full" x-model="modifiers.shoptype">
             <option value="">--</option>
             <template x-for="s in shoptype" :key="s.label">
               <option :value="s.value" x-text="s.label"></option>
@@ -110,42 +113,51 @@ cta: Try out the calculator
           <strong x-text="economy"></strong>%.
         </p>
 
-        <p class="text-center mt-2">
-          <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-1 px-2 rounded" @click="apply(economy)">Apply</button>
-          <button class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-1 px-2 rounded" @click="resetEconomy()">Reset</button>
+        <p class="mt-2 text-center">
+          <button class="rounded bg-blue-700 py-1 px-2 font-bold text-white hover:bg-blue-800" @click="apply(economy)">
+            Apply
+          </button>
+          <button class="rounded bg-gray-700 py-1 px-2 font-bold text-white hover:bg-gray-800" @click="resetEconomy()">
+            Reset
+          </button>
         </p>
       </div>
     </div>
 
     <div class="w-full md:w-1/2">
-      <div class="shadow p-4 m-4 bg-white">
-        <h3 class="text-lg mb-2 text-center">Persuasion Calculator</h3>
+      <div class="m-4 bg-white p-4 shadow">
+        <h3 class="mb-2 text-center text-lg">Persuasion Calculator</h3>
         <p>
-          Compare the player's CHA (Persuasion) against the shopkeeper's WIS (Insight).
-          Consider giving the player advantage if they role played the interaction well.
+          Compare the player's CHA (Persuasion) against the shopkeeper's WIS (Insight). Consider giving the player
+          advantage if they role played the interaction well.
         </p>
-        <hr class="my-2">
-        <label class="block mt-2">
+        <hr class="my-2" />
+        <label class="mt-2 block">
           <span class="text-gray-700">Player's CHA (Persuasion)</span>
-          <input type="number" class="form-input mt-1 w-full block" x-model="rolls.player">
+          <input type="number" class="form-input mt-1 block w-full" x-model="rolls.player" />
         </label>
-        <label class="block mt-2">
-          <input type="checkbox" class="form-checkbox" x-model="rolls.crit">
-          <span class="text-gray-700 ml-1">Crit?</span>
+        <label class="mt-2 block">
+          <input type="checkbox" class="form-checkbox" x-model="rolls.crit" />
+          <span class="ml-1 text-gray-700">Crit?</span>
         </label>
 
-        <label class="block mt-2">
+        <label class="mt-2 block">
           <span class="text-gray-700">Shopkeeper's WIS (Insight)</span>
-          <input type="number" class="form-input mt-1 w-full block" x-model="rolls.merchant">
+          <input type="number" class="form-input mt-1 block w-full" x-model="rolls.merchant" />
         </label>
 
-        <p class="text-center mt-2 font-bold">
-          <span x-text="discount"></span>%
-        </p>
+        <p class="mt-2 text-center font-bold"><span x-text="discount"></span>%</p>
 
-        <p class="text-center mt-2">
-          <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-1 px-2 rounded" @click="apply(discount, true)">Add</button>
-          <button class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-1 px-2 rounded" @click="resetRolls()">Reset</button>
+        <p class="mt-2 text-center">
+          <button
+            class="rounded bg-blue-700 py-1 px-2 font-bold text-white hover:bg-blue-800"
+            @click="apply(discount, true)"
+          >
+            Add
+          </button>
+          <button class="rounded bg-gray-700 py-1 px-2 font-bold text-white hover:bg-gray-800" @click="resetRolls()">
+            Reset
+          </button>
         </p>
       </div>
     </div>

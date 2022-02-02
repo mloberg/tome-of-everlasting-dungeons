@@ -1,21 +1,21 @@
 ---
 layout: default
 ---
-<div class="relative py-32 bg-black bg-opacity-50">
-  <div class="absolute top-0 left-0 h-full w-full -z-1 bg-top bg-no-repeat bg-cover bg-fixed" style="background-image: url({% link images/ian-gonzalez-oVXMtsMejqo-unsplash.jpg %});"></div>
-  <div class="container mx-auto px-16 md:w-1/2 pb-4">
-    <h1 class="text-center text-white text-5xl uppercase font-display pb-4 border-b-4 border-red-800">
-      {% if page.title == "Home" %}
-        {{ site.title }}
-      {% else %}
-        {{ page.title }}
-      {% endif %}
+
+<div class="relative bg-black bg-opacity-50 py-32">
+  <div
+    class="-z-1 absolute top-0 left-0 h-full w-full bg-cover bg-fixed bg-top bg-no-repeat"
+    style="background-image: url({% link images/ian-gonzalez-oVXMtsMejqo-unsplash.jpg %})"
+  ></div>
+  <div class="container mx-auto px-16 pb-4 md:w-1/2">
+    <h1 class="border-b-4 border-red-800 pb-4 text-center font-display text-5xl uppercase text-white">
+      {% if page.title == "Home" %}{{ site.title }}{% else %}{{ page.title }}{% endif %}
     </h1>
   </div>
   <div class="container mx-auto mt-8 font-body">
-    <h2 class="text-white text-center text-xl">{% if page.url == "/" %}{{ site.description }}{% else %}{{ page.subtitle }}{% endif %}</h2>
+    <h2 class="text-center text-xl text-white">
+      {% if page.url == "/" %}{{ site.description }}{% else %}{{ page.subtitle }}{% endif %}
+    </h2>
   </div>
 </div>
-<main class="container w-full mx-auto px-2 font-body">
-  {{ content }}
-</main>
+<main class="container mx-auto w-full px-2 font-body">{{ content }}</main>
