@@ -22,7 +22,7 @@
   "devDependencies": {
     "concurrently": "^7.0.0",
     "prettier": "^2.5.1",
-    "prettier-plugin-tailwindcss": "^0.1.4"
+    "prettier-plugin-tailwindcss": "^0.1.5"
   },
   "browserslist": [
     "> 0.5%",
